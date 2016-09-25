@@ -1,115 +1,112 @@
-import moment from 'moment';
-import { area, stack, stackOffsetNone, stackOffsetSilhouette, stackOffsetExpand } from 'd3-shape';
-import { extent, merge, shuffle } from 'd3-array';
-import { scaleUtc, scaleLinear } from 'd3-scale';
-import { utcParse } from 'd3-time-format';
-import { fruits } from '../data/';
+import moment from 'moment'
+import { area, stack, stackOffsetNone, stackOffsetSilhouette, stackOffsetExpand } from 'd3-shape'
+import { extent, merge, shuffle } from 'd3-array'
+import { scaleUtc, scaleLinear } from 'd3-scale'
+import { utcParse } from 'd3-time-format'
+import { fruits } from '../data/'
 
-const data = shuffle(fruits).slice(0, 10);
+const data = shuffle(fruits).slice(0, 10)
 
-function genRandomSeries(m) {
-
-  function bump(a) {
-    let x = 1 / (0.1 + Math.random());
-    let y = 2 * Math.random() - 0.5;
-    let z = 10 / (0.1 + Math.random());
+function genRandomSeries (m) {
+  function bump (a) {
+    let x = 1 / (0.1 + Math.random())
+    let y = 2 * Math.random() - 0.5
+    let z = 10 / (0.1 + Math.random())
 
     for (let i = 0; i < m; i++) {
-      let w = (i / m - y) * z;
-      a[i] += x * Math.exp(-w * w);
+      let w = (i / m - y) * z
+      a[i] += x * Math.exp(-w * w)
     }
   }
 
-  let a = [];
+  let a = []
 
   for (let i = 0; i < m; ++i) {
-    a[i] = 0;
-  }
-  
-  for (let i = 0; i < 5; ++i) {
-    bump(a);
+    a[i] = 0
   }
 
-  return a.map(d => +Math.max(0, d).toFixed(3));
+  for (let i = 0; i < 5; ++i) {
+    bump(a)
+  }
+
+  return a.map(d => +Math.max(0, d).toFixed(3))
 }
 
-export function getInitialValues(days) {
-  let timeNow = moment();
-  
-  let dates = {};
-  let names = {};
+export function getInitialValues (days) {
+  let timeNow = moment()
+
+  let dates = {}
+  let names = {}
 
   for (let i = 0; i < data.length; i++) {
-    let name = data[i].name;
-    names[name] = genRandomSeries(days);
+    let name = data[i].name
+    names[name] = genRandomSeries(days)
   }
 
-  let items = [];
+  let items = []
 
   for (let i = 0; i < days; i++) {
-    let date = timeNow.clone().subtract(i, 'days').toISOString();
-    dates[date] = true;
+    let date = timeNow.clone().subtract(i, 'days').toISOString()
+    dates[date] = true
 
-    let item = {date};
-    item.total = 0;
+    let item = {date}
+    item.total = 0
 
     for (let j = 0; j < data.length; j++) {
-      let label = data[j].name;
-      let value = Math.floor(names[label][i] * 1000); 
-      item[label] = value;
-      item.total += value;
+      let label = data[j].name
+      let value = Math.floor(names[label][i] * 1000)
+      item[label] = value
+      item.total += value
     }
 
-    items.push(item);
+    items.push(item)
   }
 
   return [
     items,
     Object.keys(names).sort().map(d => ({name: d, show: true})),
     Object.keys(dates).sort()
-  ];
+  ]
 }
 
-function getPath(x, y, yVals, dates) {
+function getPath (x, y, yVals, dates) {
   return area()
     .x(d => x(d))
     .y0((d, i) => y(yVals[i][0]))
-    .y1((d, i) => y(yVals[i][1]))(dates);
+    .y1((d, i) => y(yVals[i][1]))(dates)
 }
 
-export function getPathsAndScales(dims, data, names, dates, offset) {
+export function getPathsAndScales (dims, data, names, dates, offset) {
+  names = names.filter(d => d.show === true).map(d => d.name)
+  dates = dates.map(d => utcParse('%Y-%m-%dT%H:%M:%S.%LZ')(d))
 
-  names = names.filter(d => d.show === true).map(d => d.name);
-  dates = dates.map(d => utcParse('%Y-%m-%dT%H:%M:%S.%LZ')(d));
-
-  let layoutOffset = stackOffsetNone;
+  let layoutOffset = stackOffsetNone
 
   if (offset === 'stream') {
-    layoutOffset = stackOffsetSilhouette;
+    layoutOffset = stackOffsetSilhouette
   } else if (offset === 'expand') {
-    layoutOffset = stackOffsetExpand;
+    layoutOffset = stackOffsetExpand
   }
 
   let layout = stack()
     .keys(names)
     .value((d, key) => d[key])
-    .offset(layoutOffset)(data);
+    .offset(layoutOffset)(data)
 
   let x = scaleUtc()
     .range([0, dims[0]])
-    .domain([dates[0], dates[dates.length - 1]]);
+    .domain([dates[0], dates[dates.length - 1]])
 
   let y = scaleLinear()
     .range([dims[1], 0])
-    .domain(extent(merge(merge(layout))));
+    .domain(extent(merge(merge(layout))))
 
-  let paths = {};
+  let paths = {}
 
   for (let k = 0; k < names.length; k++) {
-    paths[names[k]] = getPath(x, y, layout[k], dates);
+    paths[names[k]] = getPath(x, y, layout[k], dates)
   }
 
-  return [paths, x, y];
+  return [paths, x, y]
 }
-
 

@@ -1,94 +1,103 @@
-import React, { Component, PropTypes } from 'react';
-import { timer } from 'd3-timer';
-import { interpolateNumber, interpolateTransformSvg } from 'd3-interpolate';
+const React = require('react')
+const { func, number, object, string, shape } = React.PropTypes
+const { interpolateNumber, interpolateTransformSvg } = require('d3-interpolate')
+const { timer } = require('d3-timer')
 
-export class XAxisTick extends Component {
+const XAxisTick = React.createClass({
+  propTypes: {
+    tick: shape({
+      udid: string.isRequired,
+      type: string.isRequired,
+      data: object.isRequired,
+      text: string.isRequired
+    }).isRequired,
+    xScale0: func.isRequired,
+    xScale1: func.isRequired,
+    yHeight: number.isRequired,
+    duration: number.isRequired,
+    removeTick: func.isRequired
+  },
+  componentDidMount () {
+    this.isEntering(this.props, this.refs)
+  },
 
-  componentDidMount() {
-    this.isEntering(this.props, this.refs);
-  }
-
-  componentWillReceiveProps(next) {
-    let {props, refs} = this;
+  componentWillReceiveProps (next) {
+    let {props, refs} = this
 
     if (props.tick !== next.tick) {
-      this.transition.stop();
+      this.transition.stop()
 
       switch (next.tick.type) {
-      case 'ENTERING':
-        return this.isEntering(next, refs);
-      case 'UPDATING':
-        return this.isUpating(next, refs);
-      case 'EXITING':
-        return this.isExiting(next, refs);
-      default:
-        throw new Error('Invalid Tick Type!');
+        case 'ENTERING':
+          return this.isEntering(next, refs)
+        case 'UPDATING':
+          return this.isUpating(next, refs)
+        case 'EXITING':
+          return this.isExiting(next, refs)
+        default:
+          throw new Error('Invalid Tick Type!')
       }
     }
-  }
+  },
 
-  isEntering({xScale0, xScale1, tick: {data}, duration}, {tick}) {
+  isEntering ({xScale0, xScale1, tick: {data}, duration}, {tick}) {
+    let beg = `translate(${xScale0(data)},0)`
+    let end = `translate(${xScale1(data)},0)`
 
-    let beg = `translate(${xScale0(data)},0)`;
-    let end = `translate(${xScale1(data)},0)`;
-
-    let interp0 = interpolateTransformSvg(beg, end);
-    let interp1 = interpolateNumber(1e-6, 1);
-
-    this.transition = timer(elapsed => {
-      let t = elapsed < duration ? (elapsed / duration): 1;
-      tick.setAttribute('transform', interp0(t));
-      tick.setAttribute('opacity', interp1(t));
-      if (t === 1) {
-        this.transition.stop();
-      }
-    });
-  }
-
-  isUpating({xScale0, xScale1, tick: {data}, duration}, {tick}) {
-
-    let beg = `translate(${xScale0(data)},0)`;
-    let end = `translate(${xScale1(data)},0)`;
-
-    let interp0 = interpolateTransformSvg(beg, end);
-    let interp1 = interpolateNumber(tick.getAttribute('opacity'), 1);
+    let interp0 = interpolateTransformSvg(beg, end)
+    let interp1 = interpolateNumber(1e-6, 1)
 
     this.transition = timer(elapsed => {
-      let t = elapsed < duration ? (elapsed / duration): 1;
-      tick.setAttribute('transform', interp0(t));
-      tick.setAttribute('opacity', interp1(t));
+      let t = elapsed < duration ? (elapsed / duration) : 1
+      tick.setAttribute('transform', interp0(t))
+      tick.setAttribute('opacity', interp1(t))
       if (t === 1) {
-        this.transition.stop();
+        this.transition.stop()
       }
-    });
-  }
+    })
+  },
 
-  isExiting({xScale0, xScale1, tick: {udid, data}, removeTick, duration}, {tick}) {
+  isUpating ({xScale0, xScale1, tick: {data}, duration}, {tick}) {
+    let beg = `translate(${xScale0(data)},0)`
+    let end = `translate(${xScale1(data)},0)`
 
-    let beg = `translate(${xScale0(data)},0)`;
-    let end = `translate(${xScale1(data)},0)`;
-
-    let interp0 = interpolateTransformSvg(beg, end);
-    let interp1 = interpolateNumber(tick.getAttribute('opacity'), 1e-6);
+    let interp0 = interpolateTransformSvg(beg, end)
+    let interp1 = interpolateNumber(tick.getAttribute('opacity'), 1)
 
     this.transition = timer(elapsed => {
-      let t = elapsed < duration ? (elapsed / duration): 1;
-      tick.setAttribute('transform', interp0(t));
-      tick.setAttribute('opacity', interp1(t));
+      let t = elapsed < duration ? (elapsed / duration) : 1
+      tick.setAttribute('transform', interp0(t))
+      tick.setAttribute('opacity', interp1(t))
       if (t === 1) {
-        this.transition.stop();
-        removeTick(udid);
+        this.transition.stop()
       }
-    });
-  }
+    })
+  },
 
-  componentWillUnmount() {
-    this.transition.stop();
-  }
+  isExiting ({xScale0, xScale1, tick: {udid, data}, removeTick, duration}, {tick}) {
+    let beg = `translate(${xScale0(data)},0)`
+    let end = `translate(${xScale1(data)},0)`
 
-  render() {
-    let {yHeight, tick: {text}} = this.props;
+    let interp0 = interpolateTransformSvg(beg, end)
+    let interp1 = interpolateNumber(tick.getAttribute('opacity'), 1e-6)
 
+    this.transition = timer(elapsed => {
+      let t = elapsed < duration ? (elapsed / duration) : 1
+      tick.setAttribute('transform', interp0(t))
+      tick.setAttribute('opacity', interp1(t))
+      if (t === 1) {
+        this.transition.stop()
+        removeTick(udid)
+      }
+    })
+  },
+
+  componentWillUnmount () {
+    this.transition.stop()
+  },
+
+  render () {
+    let {yHeight, tick: {text}} = this.props
     return (
       <g ref='tick' opacity={1e-6}>
         <line
@@ -102,23 +111,12 @@ export class XAxisTick extends Component {
           fontSize={'9px'}
           textAnchor='middle'
           fill='white'
-          x={0} y={-5} 
+          x={0} y={-5}
         >{text}</text>
       </g>
-    );
+    )
   }
-}
+})
 
-XAxisTick.propTypes = {
-  tick: PropTypes.shape({
-    udid: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    data: PropTypes.object.isRequired,
-    text: PropTypes.string.isRequired
-  }).isRequired,
-  xScale0: PropTypes.func.isRequired,
-  xScale1: PropTypes.func.isRequired,
-  yHeight: PropTypes.number.isRequired,
-  duration: PropTypes.number.isRequired,
-  removeTick: PropTypes.func.isRequired
-};
+module.exports = XAxisTick
+
