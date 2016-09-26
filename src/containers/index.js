@@ -161,8 +161,20 @@ const App = React.createClass({
             </div>
           </div>
           <div className='col-md-7 col-sm-7'>
-            <h4 style={{margin: 0}}>Hello</h4>
-            <p>fake data</p>
+            <h4 style={{margin: 0}}>As Women Take Over a Male-Dominated Field, the Pay Drops</h4>
+            <p>Occupations with a greater share of females pay less than those with a lower share,
+            controlling for education and skill. This association is explained by two dominant views:
+            devaluation and queuing. The former views the pay offered in an occupation to affect
+            its female proportion, due to employers’ preference for men– a gendered labor queue.
+            The latter argues that the proportion of females in an occupation affects pay, owing to
+            devaluation of work done by women. Only a few past studies used longitudinal data,
+            which is needed to test the theories. We use fixed-effects models, thus controlling for
+            stable characteristics of occupations, and U.S. Census data from 1950 through 2000.
+            We find substantial evidence for the devaluation view, but only scant evidence for the
+            queuing view.             
+            <a href="http://sf.oxfordjournals.org/content/88/2/865.full.pdf+html">article</a>
+            <a href="http://www.bls.gov/cps/cps_aa2002.htm">BLS Data</a>
+            </p>
           </div>
         </div>
         <div className='row' style={{marginTop: 10, marginBottom: 50}}>
