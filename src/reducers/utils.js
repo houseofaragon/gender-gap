@@ -6,42 +6,56 @@ import { utcParse } from 'd3-time-format'
 import { fruits } from '../data/'
 import { income_data } from '../data/income-data'
 
-const data = income_data
+let data = income_data
+
+/*
+const data = d.map((item) => {
+  if(item.sex === 'Men'){
+    item.occupation = item.occupation + ' - M'
+    return item
+  }
+  else{
+    item.occupation = item.occupation + ' - F'
+    return item
+  }
+})
+*/
 
 export function getInitialValues () {
-  let dates = {}
-  let names = {}
-  const map_names =  [...new Set(data.map(item => item.name))]
-  const map_dates = [...new Set(data.map(item => item.dates))]
+  let years = {}
+  let occupations = {}
+
+  const map_occupations =  [...new Set(data.map(item => item.occupation))]
+  let map_years = [...new Set(data.map(item => item.year))]
 
   const getEarnings = (occupation) => {
     let earnings = []
     data.filter((item) => {
-      if(item.name === occupation){
-        earnings.push(item.earnings)
+      if(item.occupation && item.occupation === occupation){
+        if (item.earnings) earnings.push(item.earnings)
       }
+
     })
     return earnings
   }
-  let hello = {}
 
-  for (let i = 0; i < map_names.length; i++) {
-    let name = map_names[i]
-    names[name] = getEarnings(name)
+  for (let i = 0; i < map_occupations.length; i++) {
+    let occupation = map_occupations[i]
+    occupations[occupation] = getEarnings(occupation)
   }
 
   let items = []
   
-  for (let i = 0; i < map_names.length; i++) {
-    let date = map_dates[i]
-    dates[date] = true
+  for (let i = 0; i < map_years.length; i++) {
+    let year = map_years[i]
+    years[year] = true
 
-    let item = {date}
+    let item = {year}
     item.total = 0
 
     for (let j = 0; j < data.length; j++) {
-      let label = data[j].name
-      let value = names[label][i]
+      let label = data[j].occupation
+      let value = occupations[label][i]
       item[label] = value
       item.total += value
     }
@@ -50,8 +64,8 @@ export function getInitialValues () {
 
   return [
     items,
-    Object.keys(names).sort().map(d => ({name: d, show: true})),
-    Object.keys(dates).sort()
+    Object.keys(occupations).sort().map(d => ({name: d, show: true})),
+    Object.keys(years).sort()
   ]
 }
 
@@ -91,7 +105,6 @@ export function getPathsAndScales (dims, data, names, dates, offset) {
 
   for (let k = 0; k < names.length; k++) {
     paths[names[k]] = getPath(x, y, layout[k], dates)
-    console.log('Paths: ', paths[names[k]])
   }
 
   return [paths, x, y]
