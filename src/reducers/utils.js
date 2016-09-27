@@ -4,49 +4,27 @@ import { extent, merge, shuffle } from 'd3-array'
 import { scaleUtc, scaleLinear } from 'd3-scale'
 import { utcParse } from 'd3-time-format'
 import { fruits } from '../data/'
+import { income_data } from '../data/income-data'
 
-const data = shuffle(fruits).slice(0, 10)
+const data = income_data
 
-function genRandomSeries (m) {
-  function bump (a) {
-    let x = 1 / (0.1 + Math.random())
-    let y = 2 * Math.random() - 0.5
-    let z = 10 / (0.1 + Math.random())
-
-    for (let i = 0; i < m; i++) {
-      let w = (i / m - y) * z
-      a[i] += x * Math.exp(-w * w)
-    }
-  }
-
-  let a = []
-
-  for (let i = 0; i < m; ++i) {
-    a[i] = 0
-  }
-
-  for (let i = 0; i < 5; ++i) {
-    bump(a)
-  }
-
-  return a.map(d => +Math.max(0, d).toFixed(3))
-}
-
-export function getInitialValues (days) {
+export function getInitialValues () {
   let timeNow = moment()
 
   let dates = {}
-  let names = {}
+  var names = {}
 
   for (let i = 0; i < data.length; i++) {
     let name = data[i].name
-    names[name] = genRandomSeries(days)
+    names[name] = data[i].earnings
   }
 
+  console.log('Names: ', names)
+  console.log('Names[name]', names[name])
   let items = []
-
-  for (let i = 0; i < days; i++) {
-    let date = timeNow.clone().subtract(i, 'days').toISOString()
+  
+  for (let i = 0; i < data.length; i++) {
+    let date = data[i].date
     dates[date] = true
 
     let item = {date}
@@ -54,13 +32,29 @@ export function getInitialValues (days) {
 
     for (let j = 0; j < data.length; j++) {
       let label = data[j].name
-      let value = Math.floor(names[label][i] * 1000)
+      let value = names[label].earnings
       item[label] = value
       item.total += value
     }
 
     items.push(item)
   }
+
+  /*
+  for (let i = 0; i < data.length; i++) {
+    let date = data[i].date
+    let total = 0
+    dates[date] = true
+
+    let item = {date}
+    item.totl = 0
+    let label = data[i].name
+    let value = data[i].earnings
+    item[label] = value
+    item.total += value
+    items.push(item)
+  }
+  */  
 
   return [
     items,
@@ -70,6 +64,7 @@ export function getInitialValues (days) {
 }
 
 function getPath (x, y, yVals, dates) {
+  console.log('x,y,yVals,dates: ', [x,y,yVals,dates])
   return area()
     .x(d => x(d))
     .y0((d, i) => y(yVals[i][0]))
@@ -78,7 +73,7 @@ function getPath (x, y, yVals, dates) {
 
 export function getPathsAndScales (dims, data, names, dates, offset) {
   names = names.filter(d => d.show === true).map(d => d.name)
-  dates = dates.map(d => utcParse('%Y-%m-%dT%H:%M:%S.%LZ')(d))
+  dates = dates.map(d => utcParse('%Y-%m-%d')(d))
 
   let layoutOffset = stackOffsetNone
 
@@ -105,6 +100,7 @@ export function getPathsAndScales (dims, data, names, dates, offset) {
 
   for (let k = 0; k < names.length; k++) {
     paths[names[k]] = getPath(x, y, layout[k], dates)
+    console.log('Paths: ', paths[names[k]])
   }
 
   return [paths, x, y]

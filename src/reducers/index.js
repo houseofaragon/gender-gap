@@ -1,7 +1,7 @@
 const { APP_REMOVE_NODE, APP_TOGGLE_NAME, APP_UPDATE_PATHS, APP_CHANGE_OFFSET } = require('../actions')
 const { getInitialValues, getPathsAndScales } = require('./utils')
 
-const [data, names, dates] = getInitialValues(150)
+const [data, names, dates] = getInitialValues()
 
 const initialState = {
   data: data,               // The raw dataset with all names and dates
