@@ -24,3 +24,4 @@ export const income_data = [
 		'earnings': 12
 	}
 ]
+

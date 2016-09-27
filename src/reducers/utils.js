@@ -9,22 +9,31 @@ import { income_data } from '../data/income-data'
 const data = income_data
 
 export function getInitialValues () {
-  let timeNow = moment()
-
   let dates = {}
-  var names = {}
+  let names = {}
+  const map_names =  [...new Set(data.map(item => item.name))]
+  const map_dates = [...new Set(data.map(item => item.dates))]
 
-  for (let i = 0; i < data.length; i++) {
-    let name = data[i].name
-    names[name] = data[i].earnings
+  const getEarnings = (occupation) => {
+    let earnings = []
+    data.filter((item) => {
+      if(item.name === occupation){
+        earnings.push(item.earnings)
+      }
+    })
+    return earnings
+  }
+  let hello = {}
+
+  for (let i = 0; i < map_names.length; i++) {
+    let name = map_names[i]
+    names[name] = getEarnings(name)
   }
 
-  console.log('Names: ', names)
-  console.log('Names[name]', names[name])
   let items = []
   
-  for (let i = 0; i < data.length; i++) {
-    let date = data[i].date
+  for (let i = 0; i < map_names.length; i++) {
+    let date = map_dates[i]
     dates[date] = true
 
     let item = {date}
@@ -32,29 +41,12 @@ export function getInitialValues () {
 
     for (let j = 0; j < data.length; j++) {
       let label = data[j].name
-      let value = names[label].earnings
+      let value = names[label][i]
       item[label] = value
       item.total += value
     }
-
     items.push(item)
   }
-
-  /*
-  for (let i = 0; i < data.length; i++) {
-    let date = data[i].date
-    let total = 0
-    dates[date] = true
-
-    let item = {date}
-    item.totl = 0
-    let label = data[i].name
-    let value = data[i].earnings
-    item[label] = value
-    item.total += value
-    items.push(item)
-  }
-  */  
 
   return [
     items,
@@ -64,7 +56,6 @@ export function getInitialValues () {
 }
 
 function getPath (x, y, yVals, dates) {
-  console.log('x,y,yVals,dates: ', [x,y,yVals,dates])
   return area()
     .x(d => x(d))
     .y0((d, i) => y(yVals[i][0]))
