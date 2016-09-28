@@ -13,7 +13,7 @@ const Chart = (props) => {
       }}
     >
       <svg
-        style={{position: 'absolute', top: 0, left: 0}}
+        style={{position: 'absolute', top: 0, left: 0, color:'#000'}}
         viewBox={`0 0 ${view[0]} ${view[1]}`}
       >
         <g transform={`translate(${trbl[3]},${trbl[0]})`}>

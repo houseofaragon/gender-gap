@@ -12,7 +12,7 @@ export function getInitialValues () {
   let dates = {}
   let names = {}
   const map_names =  [...new Set(data.map(item => item.name))]
-  const map_dates = [...new Set(data.map(item => item.dates))]
+  const map_dates = [...new Set(data.map(item => item.date))]
 
   const getEarnings = (occupation) => {
     let earnings = []
@@ -23,7 +23,6 @@ export function getInitialValues () {
     })
     return earnings
   }
-  let hello = {}
 
   for (let i = 0; i < map_names.length; i++) {
     let name = map_names[i]
@@ -32,7 +31,7 @@ export function getInitialValues () {
 
   let items = []
   
-  for (let i = 0; i < map_names.length; i++) {
+  for (let i = 0; i < map_dates.length; i++) {
     let date = map_dates[i]
     dates[date] = true
 

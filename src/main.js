@@ -5,7 +5,7 @@ const { Provider } = require('react-redux')
 const App = require('./containers')
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
@@ -16,7 +16,7 @@ const store = configureStore()
 
 render(
   <Provider store={store}>
-    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
       <App />
     </MuiThemeProvider>
   </Provider>, document.getElementById('content')

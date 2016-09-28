@@ -100,12 +100,12 @@ const XAxisTick = React.createClass({
     let {yHeight, tick: {text}} = this.props
     return (
       <g ref='tick' opacity={1e-6}>
-        <line
+        <line className='line'
           style={{pointerEvents: 'none'}}
           x1={0} y1={0}
           x2={0} y2={yHeight}
           opacity={0.2}
-          stroke='#fff'
+          
         />
         <text
           fontSize={'9px'}

@@ -127,41 +127,20 @@ const App = React.createClass({
           showExpandableButton={false}
         />
         <div className='row' style={{marginLeft: 0, marginRight: 0}}>
-          <div className='col-md-5 col-sm-5'>
-            <div className='row'>
-              <div className='col-md-5 col-sm-5'style={{paddingLeft: 20}}>
+          <div className='col-md-2 col-sm-2'>
                 <span>Chart Offset:</span>
                 <RadioButtonGroup
                   name='offsets'
                   valueSelected={offset}
                   onChange={(e, d) => dispatch(changeOffset(d))}
                 >
-                  <RadioButton
-                    value='stacked'
-                    label='Stacked'
-                  />
-                  <RadioButton
-                    value='stream'
-                    label='Stream'
-                  />
-                  <RadioButton
-                    value='expand'
-                    label='Expand'
-                  />
+                  <RadioButton value='stacked' label='Stacked' />
+                  <RadioButton value='stream' label='Stream' />
+                  <RadioButton value='expand' label='Expand' />
                 </RadioButtonGroup>
-              </div>
-              <div className='col-md-7 col-sm-7'>
-                <span>Transition Duration: {(duration / 1000).toFixed(1)}</span>
-                <Slider
-                  style={{marginTop: 10, marginBottom: 10}}
-                  defaultValue={0.1}
-                  onChange={this.setDuration}
-                />
-              </div>
-            </div>
           </div>
-          <div className='col-md-7 col-sm-7'>
-            <h4 style={{margin: 0}}>As Women Take Over a Male-Dominated Field, the Pay Drops</h4>
+          <div className='col-md-10 col-sm-10'>
+            <h4>As Women Take Over a Male-Dominated Field, the Pay Drops</h4>
             <p>Occupations with a greater share of females pay less than those with a lower share,
             controlling for education and skill. This association is explained by two dominant views:
             devaluation and queuing. The former views the pay offered in an occupation to affect
@@ -177,9 +156,9 @@ const App = React.createClass({
             </p>
           </div>
         </div>
-        <div className='row' style={{marginTop: 10, marginBottom: 50}}>
+        <div className='row'>
           <div
-            className='col-md-3 col-sm-3'
+            className='col-md-2 col-sm-2'
             onMouseLeave={this.setActiveName.bind(this, '')}
           >
             <Table
@@ -194,7 +173,7 @@ const App = React.createClass({
             </Table>
           </div>
           <div
-            className='col-md-9 col-sm-9'
+            className='col-md-10 col-sm-10'
             style={{padding: 0}}
             onMouseLeave={this.setActiveName.bind(this, '')}
           >
@@ -202,7 +181,7 @@ const App = React.createClass({
               {pathNodes}{xAxis}{yAxis}
               <text
                 x={5} y={15}
-                fill='#fff'
+                fill='#000'
                 style={{pointerEvents: 'none'}}
               >{activeName}</text>
             </Chart>
