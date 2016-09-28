@@ -6,7 +6,7 @@ const [data, names, dates] = getInitialValues()
 const initialState = {
   data: data,               // The raw dataset with all names and dates
   view: [500, 275],         // ViewBox: Width, Height
-  trbl: [15, 10, 10, 40],   // Margins: Top, Right, Bottom, Left
+  trbl: [15, 10, 10, 20],   // Margins: Top, Right, Bottom, Left
   names: names,             // An object with fruti names and active flag
   dates: dates,             // An array of UTC dates in the data series
   offset: 'stacked',        // The current offset: stacked, stream or expanded

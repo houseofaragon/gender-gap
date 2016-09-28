@@ -50,26 +50,26 @@
 	
 	var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
 	
-	var _darkBaseTheme = __webpack_require__(87);
+	var _lightBaseTheme = __webpack_require__(5);
 	
-	var _darkBaseTheme2 = _interopRequireDefault(_darkBaseTheme);
+	var _lightBaseTheme2 = _interopRequireDefault(_lightBaseTheme);
 	
-	var _MuiThemeProvider = __webpack_require__(88);
+	var _MuiThemeProvider = __webpack_require__(87);
 	
 	var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 	
-	var _reactTapEventPlugin = __webpack_require__(120);
+	var _reactTapEventPlugin = __webpack_require__(119);
 	
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 	
-	var _store = __webpack_require__(138);
+	var _store = __webpack_require__(137);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	__webpack_require__(268);
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	
 	var _require = __webpack_require__(565);
 	
@@ -90,7 +90,7 @@
 	  { store: store },
 	  React.createElement(
 	    _MuiThemeProvider2.default,
-	    { muiTheme: (0, _getMuiTheme2.default)(_darkBaseTheme2.default) },
+	    { muiTheme: (0, _getMuiTheme2.default)(_lightBaseTheme2.default) },
 	    React.createElement(App, null)
 	  )
 	), document.getElementById('content'));
@@ -6895,49 +6895,9 @@
 	  value: true
 	});
 	
-	var _colors = __webpack_require__(6);
-	
-	var _colorManipulator = __webpack_require__(4);
-	
-	var _spacing = __webpack_require__(7);
-	
-	var _spacing2 = _interopRequireDefault(_spacing);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	  spacing: _spacing2.default,
-	  fontFamily: 'Roboto, sans-serif',
-	  palette: {
-	    primary1Color: _colors.cyan700,
-	    primary2Color: _colors.cyan700,
-	    primary3Color: _colors.grey600,
-	    accent1Color: _colors.pinkA200,
-	    accent2Color: _colors.pinkA400,
-	    accent3Color: _colors.pinkA100,
-	    textColor: _colors.fullWhite,
-	    alternateTextColor: '#303030',
-	    canvasColor: '#303030',
-	    borderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
-	    disabledColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
-	    pickerHeaderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12),
-	    clockCircleColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12)
-	  }
-	};
-
-/***/ },
-/* 88 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _getMuiTheme = __webpack_require__(1);
 	
@@ -6987,16 +6947,16 @@
 	exports.default = MuiThemeProvider;
 
 /***/ },
-/* 89 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(90);
+	module.exports = __webpack_require__(89);
 
 
 /***/ },
-/* 90 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7012,19 +6972,19 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var ReactChildren = __webpack_require__(92);
-	var ReactComponent = __webpack_require__(103);
-	var ReactClass = __webpack_require__(109);
-	var ReactDOMFactories = __webpack_require__(114);
-	var ReactElement = __webpack_require__(95);
-	var ReactElementValidator = __webpack_require__(115);
-	var ReactPropTypes = __webpack_require__(117);
-	var ReactVersion = __webpack_require__(118);
+	var ReactChildren = __webpack_require__(91);
+	var ReactComponent = __webpack_require__(102);
+	var ReactClass = __webpack_require__(108);
+	var ReactDOMFactories = __webpack_require__(113);
+	var ReactElement = __webpack_require__(94);
+	var ReactElementValidator = __webpack_require__(114);
+	var ReactPropTypes = __webpack_require__(116);
+	var ReactVersion = __webpack_require__(117);
 	
-	var onlyChild = __webpack_require__(119);
-	var warning = __webpack_require__(97);
+	var onlyChild = __webpack_require__(118);
+	var warning = __webpack_require__(96);
 	
 	var createElement = ReactElement.createElement;
 	var createFactory = ReactElement.createFactory;
@@ -7088,7 +7048,7 @@
 	module.exports = React;
 
 /***/ },
-/* 91 */
+/* 90 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7177,7 +7137,7 @@
 
 
 /***/ },
-/* 92 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7193,11 +7153,11 @@
 	
 	'use strict';
 	
-	var PooledClass = __webpack_require__(93);
-	var ReactElement = __webpack_require__(95);
+	var PooledClass = __webpack_require__(92);
+	var ReactElement = __webpack_require__(94);
 	
-	var emptyFunction = __webpack_require__(98);
-	var traverseAllChildren = __webpack_require__(100);
+	var emptyFunction = __webpack_require__(97);
+	var traverseAllChildren = __webpack_require__(99);
 	
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
 	var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -7365,7 +7325,7 @@
 	module.exports = ReactChildren;
 
 /***/ },
-/* 93 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7381,7 +7341,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Static poolers. Several custom versions for each potential number of
@@ -7489,7 +7449,7 @@
 	module.exports = PooledClass;
 
 /***/ },
-/* 94 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7543,7 +7503,7 @@
 	module.exports = invariant;
 
 /***/ },
-/* 95 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7559,12 +7519,12 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactCurrentOwner = __webpack_require__(95);
 	
-	var warning = __webpack_require__(97);
-	var canDefineProperty = __webpack_require__(99);
+	var warning = __webpack_require__(96);
+	var canDefineProperty = __webpack_require__(98);
 	
 	// The Symbol used to tag the ReactElement type. If there is no native Symbol
 	// nor polyfill, then a plain number is used for performance.
@@ -7835,7 +7795,7 @@
 	module.exports = ReactElement;
 
 /***/ },
-/* 96 */
+/* 95 */
 /***/ function(module, exports) {
 
 	/**
@@ -7871,7 +7831,7 @@
 	module.exports = ReactCurrentOwner;
 
 /***/ },
-/* 97 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7886,7 +7846,7 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -7942,7 +7902,7 @@
 	module.exports = warning;
 
 /***/ },
-/* 98 */
+/* 97 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7985,7 +7945,7 @@
 	module.exports = emptyFunction;
 
 /***/ },
-/* 99 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8014,7 +7974,7 @@
 	module.exports = canDefineProperty;
 
 /***/ },
-/* 100 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8030,13 +7990,13 @@
 	
 	'use strict';
 	
-	var ReactCurrentOwner = __webpack_require__(96);
-	var ReactElement = __webpack_require__(95);
+	var ReactCurrentOwner = __webpack_require__(95);
+	var ReactElement = __webpack_require__(94);
 	
-	var getIteratorFn = __webpack_require__(101);
-	var invariant = __webpack_require__(94);
-	var KeyEscapeUtils = __webpack_require__(102);
-	var warning = __webpack_require__(97);
+	var getIteratorFn = __webpack_require__(100);
+	var invariant = __webpack_require__(93);
+	var KeyEscapeUtils = __webpack_require__(101);
+	var warning = __webpack_require__(96);
 	
 	var SEPARATOR = '.';
 	var SUBSEPARATOR = ':';
@@ -8177,7 +8137,7 @@
 	module.exports = traverseAllChildren;
 
 /***/ },
-/* 101 */
+/* 100 */
 /***/ function(module, exports) {
 
 	/**
@@ -8222,7 +8182,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-/* 102 */
+/* 101 */
 /***/ function(module, exports) {
 
 	/**
@@ -8285,7 +8245,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-/* 103 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8301,13 +8261,13 @@
 	
 	'use strict';
 	
-	var ReactNoopUpdateQueue = __webpack_require__(104);
-	var ReactInstrumentation = __webpack_require__(105);
+	var ReactNoopUpdateQueue = __webpack_require__(103);
+	var ReactInstrumentation = __webpack_require__(104);
 	
-	var canDefineProperty = __webpack_require__(99);
-	var emptyObject = __webpack_require__(108);
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var canDefineProperty = __webpack_require__(98);
+	var emptyObject = __webpack_require__(107);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * Base class helpers for the updating state of a component.
@@ -8411,7 +8371,7 @@
 	module.exports = ReactComponent;
 
 /***/ },
-/* 104 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8427,7 +8387,7 @@
 	
 	'use strict';
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	function warnTDZ(publicInstance, callerName) {
 	  if (true) {
@@ -8511,7 +8471,7 @@
 	module.exports = ReactNoopUpdateQueue;
 
 /***/ },
-/* 105 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8527,12 +8487,12 @@
 	
 	'use strict';
 	
-	var ReactDebugTool = __webpack_require__(106);
+	var ReactDebugTool = __webpack_require__(105);
 	
 	module.exports = { debugTool: ReactDebugTool };
 
 /***/ },
-/* 106 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8548,8 +8508,8 @@
 	
 	'use strict';
 	
-	var ReactInvalidSetStateWarningDevTool = __webpack_require__(107);
-	var warning = __webpack_require__(97);
+	var ReactInvalidSetStateWarningDevTool = __webpack_require__(106);
+	var warning = __webpack_require__(96);
 	
 	var eventHandlers = [];
 	var handlerDoesThrowForEvent = {};
@@ -8609,7 +8569,7 @@
 	module.exports = ReactDebugTool;
 
 /***/ },
-/* 107 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8625,7 +8585,7 @@
 	
 	'use strict';
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	if (true) {
 	  var processingChildContext = false;
@@ -8650,7 +8610,7 @@
 	module.exports = ReactInvalidSetStateWarningDevTool;
 
 /***/ },
-/* 108 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8674,7 +8634,7 @@
 	module.exports = emptyObject;
 
 /***/ },
-/* 109 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8690,19 +8650,19 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var ReactComponent = __webpack_require__(103);
-	var ReactElement = __webpack_require__(95);
-	var ReactPropTypeLocations = __webpack_require__(110);
-	var ReactPropTypeLocationNames = __webpack_require__(112);
-	var ReactNoopUpdateQueue = __webpack_require__(104);
+	var ReactComponent = __webpack_require__(102);
+	var ReactElement = __webpack_require__(94);
+	var ReactPropTypeLocations = __webpack_require__(109);
+	var ReactPropTypeLocationNames = __webpack_require__(111);
+	var ReactNoopUpdateQueue = __webpack_require__(103);
 	
-	var emptyObject = __webpack_require__(108);
-	var invariant = __webpack_require__(94);
-	var keyMirror = __webpack_require__(111);
-	var keyOf = __webpack_require__(113);
-	var warning = __webpack_require__(97);
+	var emptyObject = __webpack_require__(107);
+	var invariant = __webpack_require__(93);
+	var keyMirror = __webpack_require__(110);
+	var keyOf = __webpack_require__(112);
+	var warning = __webpack_require__(96);
 	
 	var MIXINS_KEY = keyOf({ mixins: null });
 	
@@ -9402,7 +9362,7 @@
 	module.exports = ReactClass;
 
 /***/ },
-/* 110 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9418,7 +9378,7 @@
 	
 	'use strict';
 	
-	var keyMirror = __webpack_require__(111);
+	var keyMirror = __webpack_require__(110);
 	
 	var ReactPropTypeLocations = keyMirror({
 	  prop: null,
@@ -9429,7 +9389,7 @@
 	module.exports = ReactPropTypeLocations;
 
 /***/ },
-/* 111 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9445,7 +9405,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Constructs an enumeration with keys equal to their value.
@@ -9481,7 +9441,7 @@
 	module.exports = keyMirror;
 
 /***/ },
-/* 112 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9510,7 +9470,7 @@
 	module.exports = ReactPropTypeLocationNames;
 
 /***/ },
-/* 113 */
+/* 112 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9549,7 +9509,7 @@
 	module.exports = keyOf;
 
 /***/ },
-/* 114 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9565,10 +9525,10 @@
 	
 	'use strict';
 	
-	var ReactElement = __webpack_require__(95);
-	var ReactElementValidator = __webpack_require__(115);
+	var ReactElement = __webpack_require__(94);
+	var ReactElementValidator = __webpack_require__(114);
 	
-	var mapObject = __webpack_require__(116);
+	var mapObject = __webpack_require__(115);
 	
 	/**
 	 * Create a factory that creates HTML tag elements.
@@ -9730,7 +9690,7 @@
 	module.exports = ReactDOMFactories;
 
 /***/ },
-/* 115 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9753,15 +9713,15 @@
 	
 	'use strict';
 	
-	var ReactElement = __webpack_require__(95);
-	var ReactPropTypeLocations = __webpack_require__(110);
-	var ReactPropTypeLocationNames = __webpack_require__(112);
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactElement = __webpack_require__(94);
+	var ReactPropTypeLocations = __webpack_require__(109);
+	var ReactPropTypeLocationNames = __webpack_require__(111);
+	var ReactCurrentOwner = __webpack_require__(95);
 	
-	var canDefineProperty = __webpack_require__(99);
-	var getIteratorFn = __webpack_require__(101);
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var canDefineProperty = __webpack_require__(98);
+	var getIteratorFn = __webpack_require__(100);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	function getDeclarationErrorAddendum() {
 	  if (ReactCurrentOwner.current) {
@@ -10016,7 +9976,7 @@
 	module.exports = ReactElementValidator;
 
 /***/ },
-/* 116 */
+/* 115 */
 /***/ function(module, exports) {
 
 	/**
@@ -10071,7 +10031,7 @@
 	module.exports = mapObject;
 
 /***/ },
-/* 117 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10087,11 +10047,11 @@
 	
 	'use strict';
 	
-	var ReactElement = __webpack_require__(95);
-	var ReactPropTypeLocationNames = __webpack_require__(112);
+	var ReactElement = __webpack_require__(94);
+	var ReactPropTypeLocationNames = __webpack_require__(111);
 	
-	var emptyFunction = __webpack_require__(98);
-	var getIteratorFn = __webpack_require__(101);
+	var emptyFunction = __webpack_require__(97);
+	var getIteratorFn = __webpack_require__(100);
 	
 	/**
 	 * Collection of methods that allow declaration and validation of props that are
@@ -10456,7 +10416,7 @@
 	module.exports = ReactPropTypes;
 
 /***/ },
-/* 118 */
+/* 117 */
 /***/ function(module, exports) {
 
 	/**
@@ -10475,7 +10435,7 @@
 	module.exports = '15.0.2';
 
 /***/ },
-/* 119 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10490,9 +10450,9 @@
 	 */
 	'use strict';
 	
-	var ReactElement = __webpack_require__(95);
+	var ReactElement = __webpack_require__(94);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Returns the first child in a collection of children and verifies that there
@@ -10513,11 +10473,11 @@
 	module.exports = onlyChild;
 
 /***/ },
-/* 120 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var invariant = __webpack_require__(121);
-	var defaultClickRejectionStrategy = __webpack_require__(122);
+	var invariant = __webpack_require__(120);
+	var defaultClickRejectionStrategy = __webpack_require__(121);
 	
 	var alreadyInjected = false;
 	
@@ -10538,14 +10498,14 @@
 	
 	  alreadyInjected = true;
 	
-	  __webpack_require__(123).injection.injectEventPluginsByName({
-	    'TapEventPlugin':       __webpack_require__(130)(shouldRejectClick)
+	  __webpack_require__(122).injection.injectEventPluginsByName({
+	    'TapEventPlugin':       __webpack_require__(129)(shouldRejectClick)
 	  });
 	};
 
 
 /***/ },
-/* 121 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10599,7 +10559,7 @@
 	module.exports = invariant;
 
 /***/ },
-/* 122 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function(lastTouchEvent, clickTimestamp) {
@@ -10610,7 +10570,7 @@
 
 
 /***/ },
-/* 123 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10626,13 +10586,13 @@
 	
 	'use strict';
 	
-	var EventPluginRegistry = __webpack_require__(124);
-	var EventPluginUtils = __webpack_require__(125);
-	var ReactErrorUtils = __webpack_require__(127);
+	var EventPluginRegistry = __webpack_require__(123);
+	var EventPluginUtils = __webpack_require__(124);
+	var ReactErrorUtils = __webpack_require__(126);
 	
-	var accumulateInto = __webpack_require__(128);
-	var forEachAccumulated = __webpack_require__(129);
-	var invariant = __webpack_require__(94);
+	var accumulateInto = __webpack_require__(127);
+	var forEachAccumulated = __webpack_require__(128);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Internal store for event listeners
@@ -10850,7 +10810,7 @@
 	module.exports = EventPluginHub;
 
 /***/ },
-/* 124 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10866,7 +10826,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Injectable ordering of event plugins.
@@ -11096,7 +11056,7 @@
 	module.exports = EventPluginRegistry;
 
 /***/ },
-/* 125 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11112,11 +11072,11 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var ReactErrorUtils = __webpack_require__(127);
+	var EventConstants = __webpack_require__(125);
+	var ReactErrorUtils = __webpack_require__(126);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * Injected dependencies:
@@ -11328,7 +11288,7 @@
 	module.exports = EventPluginUtils;
 
 /***/ },
-/* 126 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11344,7 +11304,7 @@
 	
 	'use strict';
 	
-	var keyMirror = __webpack_require__(111);
+	var keyMirror = __webpack_require__(110);
 	
 	var PropagationPhases = keyMirror({ bubbled: null, captured: null });
 	
@@ -11430,7 +11390,7 @@
 	module.exports = EventConstants;
 
 /***/ },
-/* 127 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11511,7 +11471,7 @@
 	module.exports = ReactErrorUtils;
 
 /***/ },
-/* 128 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11527,7 +11487,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 *
@@ -11575,7 +11535,7 @@
 	module.exports = accumulateInto;
 
 /***/ },
-/* 129 */
+/* 128 */
 /***/ function(module, exports) {
 
 	/**
@@ -11610,7 +11570,7 @@
 	module.exports = forEachAccumulated;
 
 /***/ },
-/* 130 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11634,14 +11594,14 @@
 	
 	"use strict";
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPluginUtils = __webpack_require__(125);
-	var EventPropagators = __webpack_require__(131);
-	var SyntheticUIEvent = __webpack_require__(132);
-	var TouchEventUtils = __webpack_require__(135);
-	var ViewportMetrics = __webpack_require__(136);
+	var EventConstants = __webpack_require__(125);
+	var EventPluginUtils = __webpack_require__(124);
+	var EventPropagators = __webpack_require__(130);
+	var SyntheticUIEvent = __webpack_require__(131);
+	var TouchEventUtils = __webpack_require__(134);
+	var ViewportMetrics = __webpack_require__(135);
 	
-	var keyOf = __webpack_require__(137);
+	var keyOf = __webpack_require__(136);
 	var topLevelTypes = EventConstants.topLevelTypes;
 	
 	var isStartish = EventPluginUtils.isStartish;
@@ -11786,7 +11746,7 @@
 
 
 /***/ },
-/* 131 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11802,13 +11762,13 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPluginHub = __webpack_require__(123);
-	var EventPluginUtils = __webpack_require__(125);
+	var EventConstants = __webpack_require__(125);
+	var EventPluginHub = __webpack_require__(122);
+	var EventPluginUtils = __webpack_require__(124);
 	
-	var accumulateInto = __webpack_require__(128);
-	var forEachAccumulated = __webpack_require__(129);
-	var warning = __webpack_require__(97);
+	var accumulateInto = __webpack_require__(127);
+	var forEachAccumulated = __webpack_require__(128);
+	var warning = __webpack_require__(96);
 	
 	var PropagationPhases = EventConstants.PropagationPhases;
 	var getListener = EventPluginHub.getListener;
@@ -11928,7 +11888,7 @@
 	module.exports = EventPropagators;
 
 /***/ },
-/* 132 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11944,9 +11904,9 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
-	var getEventTarget = __webpack_require__(134);
+	var getEventTarget = __webpack_require__(133);
 	
 	/**
 	 * @interface UIEvent
@@ -11992,7 +11952,7 @@
 	module.exports = SyntheticUIEvent;
 
 /***/ },
-/* 133 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12008,12 +11968,12 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	
-	var emptyFunction = __webpack_require__(98);
-	var warning = __webpack_require__(97);
+	var emptyFunction = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var didWarnForAddedNewProperty = false;
 	var isProxySupported = typeof Proxy === 'function';
@@ -12162,7 +12122,7 @@
 	      this[shouldBeReleasedProperties[i]] = null;
 	    }
 	    if (true) {
-	      var noop = __webpack_require__(98);
+	      var noop = __webpack_require__(97);
 	      Object.defineProperty(this, 'nativeEvent', getPooledWarningPropertyDefinition('nativeEvent', null));
 	      Object.defineProperty(this, 'preventDefault', getPooledWarningPropertyDefinition('preventDefault', noop));
 	      Object.defineProperty(this, 'stopPropagation', getPooledWarningPropertyDefinition('stopPropagation', noop));
@@ -12258,7 +12218,7 @@
 	}
 
 /***/ },
-/* 134 */
+/* 133 */
 /***/ function(module, exports) {
 
 	/**
@@ -12298,7 +12258,7 @@
 	module.exports = getEventTarget;
 
 /***/ },
-/* 135 */
+/* 134 */
 /***/ function(module, exports) {
 
 	/**
@@ -12346,7 +12306,7 @@
 
 
 /***/ },
-/* 136 */
+/* 135 */
 /***/ function(module, exports) {
 
 	/**
@@ -12378,7 +12338,7 @@
 	module.exports = ViewportMetrics;
 
 /***/ },
-/* 137 */
+/* 136 */
 /***/ function(module, exports) {
 
 	/**
@@ -12418,7 +12378,7 @@
 	module.exports = keyOf;
 
 /***/ },
-/* 138 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12428,18 +12388,18 @@
 	});
 	exports.default = configureStore;
 	
-	var _redux = __webpack_require__(139);
+	var _redux = __webpack_require__(138);
 	
-	var _reduxLogger = __webpack_require__(151);
+	var _reduxLogger = __webpack_require__(150);
 	
 	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
 	
-	var _reducers = __webpack_require__(152);
+	var _reducers = __webpack_require__(151);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function configureStore(initialState) {
-	  return (0, _redux.applyMiddleware)((0, _reduxLogger2.default)())(_redux.createStore)(_reducers.reducer, initialState);
+	  return (0, _redux.applyMiddleware)((0, _reduxLogger2.default)())(_redux.createStore)(_reducers.reducer, initialState, window.devToolsExtension && window.devToolsExtension());
 	}
 	
 	// Disable the logger for better performance
@@ -12448,7 +12408,7 @@
 	// }
 
 /***/ },
-/* 139 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12456,27 +12416,27 @@
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 	
-	var _createStore = __webpack_require__(140);
+	var _createStore = __webpack_require__(139);
 	
 	var _createStore2 = _interopRequireDefault(_createStore);
 	
-	var _combineReducers = __webpack_require__(146);
+	var _combineReducers = __webpack_require__(145);
 	
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 	
-	var _bindActionCreators = __webpack_require__(148);
+	var _bindActionCreators = __webpack_require__(147);
 	
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 	
-	var _applyMiddleware = __webpack_require__(149);
+	var _applyMiddleware = __webpack_require__(148);
 	
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 	
-	var _compose = __webpack_require__(150);
+	var _compose = __webpack_require__(149);
 	
 	var _compose2 = _interopRequireDefault(_compose);
 	
-	var _warning = __webpack_require__(147);
+	var _warning = __webpack_require__(146);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -12499,7 +12459,7 @@
 	exports.compose = _compose2["default"];
 
 /***/ },
-/* 140 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12508,11 +12468,11 @@
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 	
-	var _isPlainObject = __webpack_require__(141);
+	var _isPlainObject = __webpack_require__(140);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
-	var _symbolObservable = __webpack_require__(144);
+	var _symbolObservable = __webpack_require__(143);
 	
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 	
@@ -12766,10 +12726,10 @@
 	}
 
 /***/ },
-/* 141 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(142),
+	var getPrototype = __webpack_require__(141),
 	    isHostObject = __webpack_require__(73),
 	    isObjectLike = __webpack_require__(64);
 	
@@ -12842,10 +12802,10 @@
 
 
 /***/ },
-/* 142 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var overArg = __webpack_require__(143);
+	var overArg = __webpack_require__(142);
 	
 	/** Built-in value references. */
 	var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -12854,7 +12814,7 @@
 
 
 /***/ },
-/* 143 */
+/* 142 */
 /***/ function(module, exports) {
 
 	/**
@@ -12875,18 +12835,18 @@
 
 
 /***/ },
-/* 144 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
 	'use strict';
 	
-	module.exports = __webpack_require__(145)(global || window || this);
+	module.exports = __webpack_require__(144)(global || window || this);
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 145 */
+/* 144 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12911,7 +12871,7 @@
 
 
 /***/ },
-/* 146 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12919,13 +12879,13 @@
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 	
-	var _createStore = __webpack_require__(140);
+	var _createStore = __webpack_require__(139);
 	
-	var _isPlainObject = __webpack_require__(141);
+	var _isPlainObject = __webpack_require__(140);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
-	var _warning = __webpack_require__(147);
+	var _warning = __webpack_require__(146);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -13043,7 +13003,7 @@
 	}
 
 /***/ },
-/* 147 */
+/* 146 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13073,7 +13033,7 @@
 	}
 
 /***/ },
-/* 148 */
+/* 147 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13129,7 +13089,7 @@
 	}
 
 /***/ },
-/* 149 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13140,7 +13100,7 @@
 	
 	exports["default"] = applyMiddleware;
 	
-	var _compose = __webpack_require__(150);
+	var _compose = __webpack_require__(149);
 	
 	var _compose2 = _interopRequireDefault(_compose);
 	
@@ -13192,7 +13152,7 @@
 	}
 
 /***/ },
-/* 150 */
+/* 149 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13237,7 +13197,7 @@
 	}
 
 /***/ },
-/* 151 */
+/* 150 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13470,7 +13430,7 @@
 	module.exports = createLogger;
 
 /***/ },
-/* 152 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13483,19 +13443,19 @@
 	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
-	var _require = __webpack_require__(153);
+	var _require = __webpack_require__(152);
 	
 	var APP_REMOVE_NODE = _require.APP_REMOVE_NODE;
 	var APP_TOGGLE_NAME = _require.APP_TOGGLE_NAME;
 	var APP_UPDATE_PATHS = _require.APP_UPDATE_PATHS;
 	var APP_CHANGE_OFFSET = _require.APP_CHANGE_OFFSET;
 	
-	var _require2 = __webpack_require__(154);
+	var _require2 = __webpack_require__(153);
 	
 	var getInitialValues = _require2.getInitialValues;
 	var getPathsAndScales = _require2.getPathsAndScales;
 	
-	var _getInitialValues = getInitialValues(150);
+	var _getInitialValues = getInitialValues();
 	
 	var _getInitialValues2 = _slicedToArray(_getInitialValues, 3);
 	
@@ -13507,7 +13467,7 @@
 	var initialState = {
 	  data: data, // The raw dataset with all names and dates
 	  view: [500, 275], // ViewBox: Width, Height
-	  trbl: [15, 10, 10, 40], // Margins: Top, Right, Bottom, Left
+	  trbl: [15, 10, 10, 20], // Margins: Top, Right, Bottom, Left
 	  names: names, // An object with fruti names and active flag
 	  dates: dates, // An array of UTC dates in the data series
 	  offset: 'stacked', // The current offset: stacked, stream or expanded
@@ -13637,7 +13597,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 152 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13678,7 +13638,7 @@
 	};
 
 /***/ },
-/* 154 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13689,87 +13649,86 @@
 	exports.getInitialValues = getInitialValues;
 	exports.getPathsAndScales = getPathsAndScales;
 	
-	var _moment = __webpack_require__(155);
+	var _moment = __webpack_require__(154);
 	
 	var _moment2 = _interopRequireDefault(_moment);
 	
-	var _d3Shape = __webpack_require__(257);
+	var _d3Shape = __webpack_require__(256);
 	
-	var _d3Array = __webpack_require__(259);
+	var _d3Array = __webpack_require__(258);
 	
-	var _d3Scale = __webpack_require__(260);
+	var _d3Scale = __webpack_require__(259);
 	
-	var _d3TimeFormat = __webpack_require__(266);
+	var _d3TimeFormat = __webpack_require__(265);
 	
-	var _data = __webpack_require__(267);
+	var _data = __webpack_require__(266);
+	
+	var _blsEarnings = __webpack_require__(267);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var data = (0, _d3Array.shuffle)(_data.fruits).slice(0, 10);
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
-	function genRandomSeries(m) {
-	  function bump(a) {
-	    var x = 1 / (0.1 + Math.random());
-	    var y = 2 * Math.random() - 0.5;
-	    var z = 10 / (0.1 + Math.random());
-	
-	    for (var i = 0; i < m; i++) {
-	      var w = (i / m - y) * z;
-	      a[i] += x * Math.exp(-w * w);
-	    }
+	var data = _blsEarnings.bls_earnings_data.map(function (item) {
+	  if (item.sex === 'Men') {
+	    item.occupation = item.occupation + ' - 0';
+	    return item;
+	  } else {
+	    item.occupation = item.occupation + ' - 1';
+	    return item;
 	  }
+	});
 	
-	  var a = [];
-	
-	  for (var i = 0; i < m; ++i) {
-	    a[i] = 0;
-	  }
-	
-	  for (var _i = 0; _i < 5; ++_i) {
-	    bump(a);
-	  }
-	
-	  return a.map(function (d) {
-	    return +Math.max(0, d).toFixed(3);
-	  });
-	}
-	
-	function getInitialValues(days) {
-	  var timeNow = (0, _moment2.default)();
-	
-	  var dates = {};
-	  var names = {};
-	
-	  for (var i = 0; i < data.length; i++) {
-	    var name = data[i].name;
-	    names[name] = genRandomSeries(days);
-	  }
-	
-	  var items = [];
-	
-	  for (var _i2 = 0; _i2 < days; _i2++) {
-	    var date = timeNow.clone().subtract(_i2, 'days').toISOString();
-	    dates[date] = true;
-	
-	    var item = { date: date };
+	var getItems = function getItems() {
+	  map_years.map(function (year, idx1) {
+	    years[year] = true;
+	    var item = { year: year };
 	    item.total = 0;
 	
-	    for (var j = 0; j < data.length; j++) {
-	      var label = data[j].name;
-	      var value = Math.floor(names[label][_i2] * 1000);
+	    data.map(function (oc, idx2) {
+	      var label = oc.occupation;
+	      var value = occupations[label][idx1];
+	      if (value === undefined) value = 0;
 	      item[label] = value;
 	      item.total += value;
+	    });
+	    return item;
+	  });
+	};
+	
+	var getEarnings = function getEarnings(occupation) {
+	  var earnings = [];
+	  data.filter(function (item) {
+	    if (item.occupation && item.occupation === occupation) {
+	      if (item.earnings) earnings.push(item.earnings);
 	    }
+	  });
+	  return earnings;
+	};
 	
-	    items.push(item);
-	  }
+	function getInitialValues() {
+	  var years = {};
+	  var occupations = {};
 	
-	  return [items, Object.keys(names).sort().map(function (d) {
+	  var map_occupations = [].concat(_toConsumableArray(new Set(data.map(function (item) {
+	    return item.occupation;
+	  }))));
+	  var map_years = [].concat(_toConsumableArray(new Set(data.map(function (item) {
+	    return item.year;
+	  }))));
+	
+	  map_occupations.map(function (occupation, idx) {
+	    occupations[occupation] = getEarnings(occupation);
+	  });
+	
+	  var items = getItems();
+	
+	  return [items, Object.keys(occupations).sort().map(function (d) {
 	    return { name: d, show: true };
-	  }), Object.keys(dates).sort()];
+	  }), Object.keys(years).sort()];
 	}
 	
-	function getPath(x, y, yVals, dates) {
+	var getPath = function getPath(x, y, yVals, dates) {
 	  return (0, _d3Shape.area)().x(function (d) {
 	    return x(d);
 	  }).y0(function (d, i) {
@@ -13777,7 +13736,7 @@
 	  }).y1(function (d, i) {
 	    return y(yVals[i][1]);
 	  })(dates);
-	}
+	};
 	
 	function getPathsAndScales(dims, data, names, dates, offset) {
 	  names = names.filter(function (d) {
@@ -13786,13 +13745,13 @@
 	    return d.name;
 	  });
 	  dates = dates.map(function (d) {
-	    return (0, _d3TimeFormat.utcParse)('%Y-%m-%dT%H:%M:%S.%LZ')(d);
+	    return (0, _d3TimeFormat.utcParse)('%Y')(d);
 	  });
 	
 	  var layoutOffset = _d3Shape.stackOffsetNone;
 	
 	  if (offset === 'stream') {
-	    layoutOffset = _d3Shape.stackOffsetSilhouette;
+	    layoutOffset = _d3Shape.stackOffsetWiggle;
 	  } else if (offset === 'expand') {
 	    layoutOffset = _d3Shape.stackOffsetExpand;
 	  }
@@ -13815,7 +13774,7 @@
 	}
 
 /***/ },
-/* 155 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -14216,7 +14175,7 @@
 	                module && module.exports) {
 	            try {
 	                oldLocale = globalLocale._abbr;
-	                __webpack_require__(156)("./" + name);
+	                __webpack_require__(155)("./" + name);
 	                // because defineLocale currently also sets the global locale, we
 	                // want to undo that for lazy loaded locales
 	                locale_locales__getSetGlobalLocale(oldLocale);
@@ -17861,210 +17820,210 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
 
 /***/ },
-/* 156 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./af": 157,
-		"./af.js": 157,
-		"./ar": 158,
-		"./ar-ma": 159,
-		"./ar-ma.js": 159,
-		"./ar-sa": 160,
-		"./ar-sa.js": 160,
-		"./ar-tn": 161,
-		"./ar-tn.js": 161,
-		"./ar.js": 158,
-		"./az": 162,
-		"./az.js": 162,
-		"./be": 163,
-		"./be.js": 163,
-		"./bg": 164,
-		"./bg.js": 164,
-		"./bn": 165,
-		"./bn.js": 165,
-		"./bo": 166,
-		"./bo.js": 166,
-		"./br": 167,
-		"./br.js": 167,
-		"./bs": 168,
-		"./bs.js": 168,
-		"./ca": 169,
-		"./ca.js": 169,
-		"./cs": 170,
-		"./cs.js": 170,
-		"./cv": 171,
-		"./cv.js": 171,
-		"./cy": 172,
-		"./cy.js": 172,
-		"./da": 173,
-		"./da.js": 173,
-		"./de": 174,
-		"./de-at": 175,
-		"./de-at.js": 175,
-		"./de.js": 174,
-		"./dv": 176,
-		"./dv.js": 176,
-		"./el": 177,
-		"./el.js": 177,
-		"./en-au": 178,
-		"./en-au.js": 178,
-		"./en-ca": 179,
-		"./en-ca.js": 179,
-		"./en-gb": 180,
-		"./en-gb.js": 180,
-		"./en-ie": 181,
-		"./en-ie.js": 181,
-		"./en-nz": 182,
-		"./en-nz.js": 182,
-		"./eo": 183,
-		"./eo.js": 183,
-		"./es": 184,
-		"./es.js": 184,
-		"./et": 185,
-		"./et.js": 185,
-		"./eu": 186,
-		"./eu.js": 186,
-		"./fa": 187,
-		"./fa.js": 187,
-		"./fi": 188,
-		"./fi.js": 188,
-		"./fo": 189,
-		"./fo.js": 189,
-		"./fr": 190,
-		"./fr-ca": 191,
-		"./fr-ca.js": 191,
-		"./fr-ch": 192,
-		"./fr-ch.js": 192,
-		"./fr.js": 190,
-		"./fy": 193,
-		"./fy.js": 193,
-		"./gd": 194,
-		"./gd.js": 194,
-		"./gl": 195,
-		"./gl.js": 195,
-		"./he": 196,
-		"./he.js": 196,
-		"./hi": 197,
-		"./hi.js": 197,
-		"./hr": 198,
-		"./hr.js": 198,
-		"./hu": 199,
-		"./hu.js": 199,
-		"./hy-am": 200,
-		"./hy-am.js": 200,
-		"./id": 201,
-		"./id.js": 201,
-		"./is": 202,
-		"./is.js": 202,
-		"./it": 203,
-		"./it.js": 203,
-		"./ja": 204,
-		"./ja.js": 204,
-		"./jv": 205,
-		"./jv.js": 205,
-		"./ka": 206,
-		"./ka.js": 206,
-		"./kk": 207,
-		"./kk.js": 207,
-		"./km": 208,
-		"./km.js": 208,
-		"./ko": 209,
-		"./ko.js": 209,
-		"./ky": 210,
-		"./ky.js": 210,
-		"./lb": 211,
-		"./lb.js": 211,
-		"./lo": 212,
-		"./lo.js": 212,
-		"./lt": 213,
-		"./lt.js": 213,
-		"./lv": 214,
-		"./lv.js": 214,
-		"./me": 215,
-		"./me.js": 215,
-		"./mk": 216,
-		"./mk.js": 216,
-		"./ml": 217,
-		"./ml.js": 217,
-		"./mr": 218,
-		"./mr.js": 218,
-		"./ms": 219,
-		"./ms-my": 220,
-		"./ms-my.js": 220,
-		"./ms.js": 219,
-		"./my": 221,
-		"./my.js": 221,
-		"./nb": 222,
-		"./nb.js": 222,
-		"./ne": 223,
-		"./ne.js": 223,
-		"./nl": 224,
-		"./nl.js": 224,
-		"./nn": 225,
-		"./nn.js": 225,
-		"./pa-in": 226,
-		"./pa-in.js": 226,
-		"./pl": 227,
-		"./pl.js": 227,
-		"./pt": 228,
-		"./pt-br": 229,
-		"./pt-br.js": 229,
-		"./pt.js": 228,
-		"./ro": 230,
-		"./ro.js": 230,
-		"./ru": 231,
-		"./ru.js": 231,
-		"./se": 232,
-		"./se.js": 232,
-		"./si": 233,
-		"./si.js": 233,
-		"./sk": 234,
-		"./sk.js": 234,
-		"./sl": 235,
-		"./sl.js": 235,
-		"./sq": 236,
-		"./sq.js": 236,
-		"./sr": 237,
-		"./sr-cyrl": 238,
-		"./sr-cyrl.js": 238,
-		"./sr.js": 237,
-		"./ss": 239,
-		"./ss.js": 239,
-		"./sv": 240,
-		"./sv.js": 240,
-		"./sw": 241,
-		"./sw.js": 241,
-		"./ta": 242,
-		"./ta.js": 242,
-		"./te": 243,
-		"./te.js": 243,
-		"./th": 244,
-		"./th.js": 244,
-		"./tl-ph": 245,
-		"./tl-ph.js": 245,
-		"./tlh": 246,
-		"./tlh.js": 246,
-		"./tr": 247,
-		"./tr.js": 247,
-		"./tzl": 248,
-		"./tzl.js": 248,
-		"./tzm": 249,
-		"./tzm-latn": 250,
-		"./tzm-latn.js": 250,
-		"./tzm.js": 249,
-		"./uk": 251,
-		"./uk.js": 251,
-		"./uz": 252,
-		"./uz.js": 252,
-		"./vi": 253,
-		"./vi.js": 253,
-		"./x-pseudo": 254,
-		"./x-pseudo.js": 254,
-		"./zh-cn": 255,
-		"./zh-cn.js": 255,
-		"./zh-tw": 256,
-		"./zh-tw.js": 256
+		"./af": 156,
+		"./af.js": 156,
+		"./ar": 157,
+		"./ar-ma": 158,
+		"./ar-ma.js": 158,
+		"./ar-sa": 159,
+		"./ar-sa.js": 159,
+		"./ar-tn": 160,
+		"./ar-tn.js": 160,
+		"./ar.js": 157,
+		"./az": 161,
+		"./az.js": 161,
+		"./be": 162,
+		"./be.js": 162,
+		"./bg": 163,
+		"./bg.js": 163,
+		"./bn": 164,
+		"./bn.js": 164,
+		"./bo": 165,
+		"./bo.js": 165,
+		"./br": 166,
+		"./br.js": 166,
+		"./bs": 167,
+		"./bs.js": 167,
+		"./ca": 168,
+		"./ca.js": 168,
+		"./cs": 169,
+		"./cs.js": 169,
+		"./cv": 170,
+		"./cv.js": 170,
+		"./cy": 171,
+		"./cy.js": 171,
+		"./da": 172,
+		"./da.js": 172,
+		"./de": 173,
+		"./de-at": 174,
+		"./de-at.js": 174,
+		"./de.js": 173,
+		"./dv": 175,
+		"./dv.js": 175,
+		"./el": 176,
+		"./el.js": 176,
+		"./en-au": 177,
+		"./en-au.js": 177,
+		"./en-ca": 178,
+		"./en-ca.js": 178,
+		"./en-gb": 179,
+		"./en-gb.js": 179,
+		"./en-ie": 180,
+		"./en-ie.js": 180,
+		"./en-nz": 181,
+		"./en-nz.js": 181,
+		"./eo": 182,
+		"./eo.js": 182,
+		"./es": 183,
+		"./es.js": 183,
+		"./et": 184,
+		"./et.js": 184,
+		"./eu": 185,
+		"./eu.js": 185,
+		"./fa": 186,
+		"./fa.js": 186,
+		"./fi": 187,
+		"./fi.js": 187,
+		"./fo": 188,
+		"./fo.js": 188,
+		"./fr": 189,
+		"./fr-ca": 190,
+		"./fr-ca.js": 190,
+		"./fr-ch": 191,
+		"./fr-ch.js": 191,
+		"./fr.js": 189,
+		"./fy": 192,
+		"./fy.js": 192,
+		"./gd": 193,
+		"./gd.js": 193,
+		"./gl": 194,
+		"./gl.js": 194,
+		"./he": 195,
+		"./he.js": 195,
+		"./hi": 196,
+		"./hi.js": 196,
+		"./hr": 197,
+		"./hr.js": 197,
+		"./hu": 198,
+		"./hu.js": 198,
+		"./hy-am": 199,
+		"./hy-am.js": 199,
+		"./id": 200,
+		"./id.js": 200,
+		"./is": 201,
+		"./is.js": 201,
+		"./it": 202,
+		"./it.js": 202,
+		"./ja": 203,
+		"./ja.js": 203,
+		"./jv": 204,
+		"./jv.js": 204,
+		"./ka": 205,
+		"./ka.js": 205,
+		"./kk": 206,
+		"./kk.js": 206,
+		"./km": 207,
+		"./km.js": 207,
+		"./ko": 208,
+		"./ko.js": 208,
+		"./ky": 209,
+		"./ky.js": 209,
+		"./lb": 210,
+		"./lb.js": 210,
+		"./lo": 211,
+		"./lo.js": 211,
+		"./lt": 212,
+		"./lt.js": 212,
+		"./lv": 213,
+		"./lv.js": 213,
+		"./me": 214,
+		"./me.js": 214,
+		"./mk": 215,
+		"./mk.js": 215,
+		"./ml": 216,
+		"./ml.js": 216,
+		"./mr": 217,
+		"./mr.js": 217,
+		"./ms": 218,
+		"./ms-my": 219,
+		"./ms-my.js": 219,
+		"./ms.js": 218,
+		"./my": 220,
+		"./my.js": 220,
+		"./nb": 221,
+		"./nb.js": 221,
+		"./ne": 222,
+		"./ne.js": 222,
+		"./nl": 223,
+		"./nl.js": 223,
+		"./nn": 224,
+		"./nn.js": 224,
+		"./pa-in": 225,
+		"./pa-in.js": 225,
+		"./pl": 226,
+		"./pl.js": 226,
+		"./pt": 227,
+		"./pt-br": 228,
+		"./pt-br.js": 228,
+		"./pt.js": 227,
+		"./ro": 229,
+		"./ro.js": 229,
+		"./ru": 230,
+		"./ru.js": 230,
+		"./se": 231,
+		"./se.js": 231,
+		"./si": 232,
+		"./si.js": 232,
+		"./sk": 233,
+		"./sk.js": 233,
+		"./sl": 234,
+		"./sl.js": 234,
+		"./sq": 235,
+		"./sq.js": 235,
+		"./sr": 236,
+		"./sr-cyrl": 237,
+		"./sr-cyrl.js": 237,
+		"./sr.js": 236,
+		"./ss": 238,
+		"./ss.js": 238,
+		"./sv": 239,
+		"./sv.js": 239,
+		"./sw": 240,
+		"./sw.js": 240,
+		"./ta": 241,
+		"./ta.js": 241,
+		"./te": 242,
+		"./te.js": 242,
+		"./th": 243,
+		"./th.js": 243,
+		"./tl-ph": 244,
+		"./tl-ph.js": 244,
+		"./tlh": 245,
+		"./tlh.js": 245,
+		"./tr": 246,
+		"./tr.js": 246,
+		"./tzl": 247,
+		"./tzl.js": 247,
+		"./tzm": 248,
+		"./tzm-latn": 249,
+		"./tzm-latn.js": 249,
+		"./tzm.js": 248,
+		"./uk": 250,
+		"./uk.js": 250,
+		"./uz": 251,
+		"./uz.js": 251,
+		"./vi": 252,
+		"./vi.js": 252,
+		"./x-pseudo": 253,
+		"./x-pseudo.js": 253,
+		"./zh-cn": 254,
+		"./zh-cn.js": 254,
+		"./zh-tw": 255,
+		"./zh-tw.js": 255
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -18077,11 +18036,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 156;
+	webpackContext.id = 155;
 
 
 /***/ },
-/* 157 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18089,7 +18048,7 @@
 	//! author : Werner Mollentze : https://github.com/wernerm
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18158,7 +18117,7 @@
 	}));
 
 /***/ },
-/* 158 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18168,7 +18127,7 @@
 	//! Native plural forms: forabi https://github.com/forabi
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18299,7 +18258,7 @@
 	}));
 
 /***/ },
-/* 159 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18308,7 +18267,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18363,7 +18322,7 @@
 	}));
 
 /***/ },
-/* 160 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18371,7 +18330,7 @@
 	//! author : Suhail Alkowaileet : https://github.com/xsoh
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18471,14 +18430,14 @@
 	}));
 
 /***/ },
-/* 161 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale  : Tunisian Arabic (ar-tn)
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18533,7 +18492,7 @@
 	}));
 
 /***/ },
-/* 162 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18541,7 +18500,7 @@
 	//! author : topchiyev : https://github.com/topchiyev
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18642,7 +18601,7 @@
 	}));
 
 /***/ },
-/* 163 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18652,7 +18611,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18780,7 +18739,7 @@
 	}));
 
 /***/ },
-/* 164 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18788,7 +18747,7 @@
 	//! author : Krasen Borisov : https://github.com/kraz
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18874,7 +18833,7 @@
 	}));
 
 /***/ },
-/* 165 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -18882,7 +18841,7 @@
 	//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -18997,7 +18956,7 @@
 	}));
 
 /***/ },
-/* 166 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19005,7 +18964,7 @@
 	//! author : Thupten N. Chakrishar : https://github.com/vajradog
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19120,7 +19079,7 @@
 	}));
 
 /***/ },
-/* 167 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19128,7 +19087,7 @@
 	//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19232,7 +19191,7 @@
 	}));
 
 /***/ },
-/* 168 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19241,7 +19200,7 @@
 	//! based on (hr) translation by Bojan Marković
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19379,7 +19338,7 @@
 	}));
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19387,7 +19346,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19464,7 +19423,7 @@
 	}));
 
 /***/ },
-/* 170 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19472,7 +19431,7 @@
 	//! author : petrbela : https://github.com/petrbela
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19639,7 +19598,7 @@
 	}));
 
 /***/ },
-/* 171 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19647,7 +19606,7 @@
 	//! author : Anatoly Mironov : https://github.com/mirontoli
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19706,7 +19665,7 @@
 	}));
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19714,7 +19673,7 @@
 	//! author : Robert Allen
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19790,7 +19749,7 @@
 	}));
 
 /***/ },
-/* 173 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19798,7 +19757,7 @@
 	//! author : Ulrik Nielsen : https://github.com/mrbase
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19854,7 +19813,7 @@
 	}));
 
 /***/ },
-/* 174 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19864,7 +19823,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -19936,7 +19895,7 @@
 	}));
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -19947,7 +19906,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20019,7 +19978,7 @@
 	}));
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20027,7 +19986,7 @@
 	//! author : Jawish Hameed : https://github.com/jawish
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20122,7 +20081,7 @@
 	}));
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20130,7 +20089,7 @@
 	//! author : Aggelos Karalias : https://github.com/mehiel
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20224,14 +20183,14 @@
 	}));
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale : australian english (en-au)
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20294,7 +20253,7 @@
 	}));
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20302,7 +20261,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20361,7 +20320,7 @@
 	}));
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20369,7 +20328,7 @@
 	//! author : Chris Gedrim : https://github.com/chrisgedrim
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20432,7 +20391,7 @@
 	}));
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20440,7 +20399,7 @@
 	//! author : Chris Cartlidge : https://github.com/chriscartlidge
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20503,14 +20462,14 @@
 	}));
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale : New Zealand english (en-nz)
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20573,7 +20532,7 @@
 	}));
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20583,7 +20542,7 @@
 	//!          Se ne, bonvolu korekti kaj avizi min por ke mi povas lerni!
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20650,7 +20609,7 @@
 	}));
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20658,7 +20617,7 @@
 	//! author : Julio Napurí : https://github.com/julionc
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20735,7 +20694,7 @@
 	}));
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20744,7 +20703,7 @@
 	//! improvements : Illimar Tambek : https://github.com/ragulka
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20819,7 +20778,7 @@
 	}));
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20827,7 +20786,7 @@
 	//! author : Eneko Illarramendi : https://github.com/eillarra
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20889,7 +20848,7 @@
 	}));
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -20897,7 +20856,7 @@
 	//! author : Ebrahim Byagowi : https://github.com/ebraminio
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -20999,7 +20958,7 @@
 	}));
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21007,7 +20966,7 @@
 	//! author : Tarmo Aidantausta : https://github.com/bleadof
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21110,7 +21069,7 @@
 	}));
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21118,7 +21077,7 @@
 	//! author : Ragnar Johannesen : https://github.com/ragnar123
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21174,7 +21133,7 @@
 	}));
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21182,7 +21141,7 @@
 	//! author : John Fischer : https://github.com/jfroffice
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21242,7 +21201,7 @@
 	}));
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21250,7 +21209,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21306,7 +21265,7 @@
 	}));
 
 /***/ },
-/* 192 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21314,7 +21273,7 @@
 	//! author : Gaspard Bucher : https://github.com/gaspard
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21374,7 +21333,7 @@
 	}));
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21382,7 +21341,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21451,7 +21410,7 @@
 	}));
 
 /***/ },
-/* 194 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21459,7 +21418,7 @@
 	//! author : Jon Ashdown : https://github.com/jonashdown
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21531,7 +21490,7 @@
 	}));
 
 /***/ },
-/* 195 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21539,7 +21498,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21612,7 +21571,7 @@
 	}));
 
 /***/ },
-/* 196 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21622,7 +21581,7 @@
 	//! author : Tal Ater : https://github.com/TalAter
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21715,7 +21674,7 @@
 	}));
 
 /***/ },
-/* 197 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21723,7 +21682,7 @@
 	//! author : Mayank Singhal : https://github.com/mayanksinghal
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21843,7 +21802,7 @@
 	}));
 
 /***/ },
-/* 198 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -21851,7 +21810,7 @@
 	//! author : Bojan Marković : https://github.com/bmarkovic
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -21992,7 +21951,7 @@
 	}));
 
 /***/ },
-/* 199 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22000,7 +21959,7 @@
 	//! author : Adam Brunner : https://github.com/adambrunner
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22105,7 +22064,7 @@
 	}));
 
 /***/ },
-/* 200 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22113,7 +22072,7 @@
 	//! author : Armendarabyan : https://github.com/armendarabyan
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22204,7 +22163,7 @@
 	}));
 
 /***/ },
-/* 201 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22213,7 +22172,7 @@
 	//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22291,7 +22250,7 @@
 	}));
 
 /***/ },
-/* 202 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22299,7 +22258,7 @@
 	//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22422,7 +22381,7 @@
 	}));
 
 /***/ },
-/* 203 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22431,7 +22390,7 @@
 	//! author: Mattia Larentis: https://github.com/nostalgiaz
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22496,7 +22455,7 @@
 	}));
 
 /***/ },
-/* 204 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22504,7 +22463,7 @@
 	//! author : LI Long : https://github.com/baryon
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22576,7 +22535,7 @@
 	}));
 
 /***/ },
-/* 205 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22585,7 +22544,7 @@
 	//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22663,7 +22622,7 @@
 	}));
 
 /***/ },
-/* 206 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22671,7 +22630,7 @@
 	//! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22756,7 +22715,7 @@
 	}));
 
 /***/ },
-/* 207 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22764,7 +22723,7 @@
 	//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22847,7 +22806,7 @@
 	}));
 
 /***/ },
-/* 208 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22855,7 +22814,7 @@
 	//! author : Kruy Vanna : https://github.com/kruyvanna
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22909,7 +22868,7 @@
 	}));
 
 /***/ },
-/* 209 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22921,7 +22880,7 @@
 	//! - Jeeeyul Lee <jeeeyul@gmail.com>
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -22981,7 +22940,7 @@
 	}));
 
 /***/ },
-/* 210 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -22989,7 +22948,7 @@
 	//! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23073,7 +23032,7 @@
 	}));
 
 /***/ },
-/* 211 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23081,7 +23040,7 @@
 	//! author : mweimerskirch : https://github.com/mweimerskirch, David Raison : https://github.com/kwisatz
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23213,7 +23172,7 @@
 	}));
 
 /***/ },
-/* 212 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23221,7 +23180,7 @@
 	//! author : Ryan Hart : https://github.com/ryanhart2
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23287,7 +23246,7 @@
 	}));
 
 /***/ },
-/* 213 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23295,7 +23254,7 @@
 	//! author : Mindaugas Mozūras : https://github.com/mmozuras
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23407,7 +23366,7 @@
 	}));
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23416,7 +23375,7 @@
 	//! author : Jānis Elmeris : https://github.com/JanisE
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23508,7 +23467,7 @@
 	}));
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23516,7 +23475,7 @@
 	//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23623,7 +23582,7 @@
 	}));
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23631,7 +23590,7 @@
 	//! author : Borislav Mickov : https://github.com/B0k0
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23717,7 +23676,7 @@
 	}));
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23725,7 +23684,7 @@
 	//! author : Floyd Pink : https://github.com/floydpink
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23802,7 +23761,7 @@
 	}));
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23811,7 +23770,7 @@
 	//! author : Vivek Athalye : https://github.com/vnathalye
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -23965,7 +23924,7 @@
 	}));
 
 /***/ },
-/* 219 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -23973,7 +23932,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24051,7 +24010,7 @@
 	}));
 
 /***/ },
-/* 220 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24059,7 +24018,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24137,7 +24096,7 @@
 	}));
 
 /***/ },
-/* 221 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24145,7 +24104,7 @@
 	//! author : Squar team, mysquar.com
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24234,7 +24193,7 @@
 	}));
 
 /***/ },
-/* 222 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24243,7 +24202,7 @@
 	//!           Sigurd Gartmann : https://github.com/sigurdga
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24301,7 +24260,7 @@
 	}));
 
 /***/ },
-/* 223 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24309,7 +24268,7 @@
 	//! author : suvash : https://github.com/suvash
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24428,7 +24387,7 @@
 	}));
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24436,7 +24395,7 @@
 	//! author : Joris Röling : https://github.com/jjupiter
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24505,7 +24464,7 @@
 	}));
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24513,7 +24472,7 @@
 	//! author : https://github.com/mechuwind
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24569,7 +24528,7 @@
 	}));
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24577,7 +24536,7 @@
 	//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24697,7 +24656,7 @@
 	}));
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24705,7 +24664,7 @@
 	//! author : Rafal Hirsz : https://github.com/evoL
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24806,7 +24765,7 @@
 	}));
 
 /***/ },
-/* 228 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24814,7 +24773,7 @@
 	//! author : Jefferson : https://github.com/jalex79
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24875,7 +24834,7 @@
 	}));
 
 /***/ },
-/* 229 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24883,7 +24842,7 @@
 	//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -24940,7 +24899,7 @@
 	}));
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -24949,7 +24908,7 @@
 	//! author : Valentin Agachi : https://github.com/avaly
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25019,7 +24978,7 @@
 	}));
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25029,7 +24988,7 @@
 	//! author : Коренберг Марк : https://github.com/socketpair
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25198,7 +25157,7 @@
 	}));
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25206,7 +25165,7 @@
 	//! authors : Bård Rolstad Henriksen : https://github.com/karamell
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25263,7 +25222,7 @@
 	}));
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25271,7 +25230,7 @@
 	//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25338,7 +25297,7 @@
 	}));
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25347,7 +25306,7 @@
 	//! based on work of petrbela : https://github.com/petrbela
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25492,7 +25451,7 @@
 	}));
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25500,7 +25459,7 @@
 	//! author : Robert Sedovšek : https://github.com/sedovsek
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25658,7 +25617,7 @@
 	}));
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25668,7 +25627,7 @@
 	//! author : Oerd Cukalla : https://github.com/oerd (fixes)
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25732,7 +25691,7 @@
 	}));
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25740,7 +25699,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25846,7 +25805,7 @@
 	}));
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25854,7 +25813,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -25960,7 +25919,7 @@
 	}));
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -25968,7 +25927,7 @@
 	//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26053,7 +26012,7 @@
 	}));
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26061,7 +26020,7 @@
 	//! author : Jens Alm : https://github.com/ulmus
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26126,7 +26085,7 @@
 	}));
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26134,7 +26093,7 @@
 	//! author : Fahad Kassim : https://github.com/fadsel
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26189,7 +26148,7 @@
 	}));
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26197,7 +26156,7 @@
 	//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26322,7 +26281,7 @@
 	}));
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26330,7 +26289,7 @@
 	//! author : Krishna Chaitanya Thota : https://github.com/kcthota
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26415,7 +26374,7 @@
 	}));
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26423,7 +26382,7 @@
 	//! author : Kridsada Thanabulpong : https://github.com/sirn
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26486,7 +26445,7 @@
 	}));
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26494,7 +26453,7 @@
 	//! author : Dan Hagman
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26552,7 +26511,7 @@
 	}));
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26560,7 +26519,7 @@
 	//! author : Dominika Kruk : https://github.com/amaranthrose
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26676,7 +26635,7 @@
 	}));
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26685,7 +26644,7 @@
 	//!           Burak Yiğit Kaya: https://github.com/BYK
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26770,7 +26729,7 @@
 	}));
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26778,7 +26737,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v with the help of Iustì Canun
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26865,7 +26824,7 @@
 	}));
 
 /***/ },
-/* 249 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26873,7 +26832,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26927,7 +26886,7 @@
 	}));
 
 /***/ },
-/* 250 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26935,7 +26894,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -26989,7 +26948,7 @@
 	}));
 
 /***/ },
-/* 251 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -26998,7 +26957,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27139,7 +27098,7 @@
 	}));
 
 /***/ },
-/* 252 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -27147,7 +27106,7 @@
 	//! author : Sardor Muminov : https://github.com/muminoff
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27201,7 +27160,7 @@
 	}));
 
 /***/ },
-/* 253 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -27209,7 +27168,7 @@
 	//! author : Bang Nguyen : https://github.com/bangnk
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27284,7 +27243,7 @@
 	}));
 
 /***/ },
-/* 254 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -27292,7 +27251,7 @@
 	//! author : Andrew Hood : https://github.com/andrewhood125
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27356,7 +27315,7 @@
 	}));
 
 /***/ },
-/* 255 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -27365,7 +27324,7 @@
 	//! author : Zeno Zeng : https://github.com/zenozeng
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27487,7 +27446,7 @@
 	}));
 
 /***/ },
-/* 256 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -27495,7 +27454,7 @@
 	//! author : Ben : https://github.com/ben-lin
 	
 	;(function (global, factory) {
-	    true ? factory(__webpack_require__(155)) :
+	    true ? factory(__webpack_require__(154)) :
 	   typeof define === 'function' && define.amd ? define(['moment'], factory) :
 	   factory(global.moment)
 	}(this, function (moment) { 'use strict';
@@ -27592,11 +27551,11 @@
 	}));
 
 /***/ },
-/* 257 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(258)) :
+	   true ? factory(exports, __webpack_require__(257)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'd3-path'], factory) :
 	  (factory((global.d3_shape = global.d3_shape || {}),global.d3_path));
 	}(this, function (exports,d3Path) { 'use strict';
@@ -29386,7 +29345,7 @@
 	}));
 
 /***/ },
-/* 258 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -29546,7 +29505,7 @@
 	}));
 
 /***/ },
-/* 259 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -30020,11 +29979,11 @@
 	}));
 
 /***/ },
-/* 260 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(259), __webpack_require__(261), __webpack_require__(262), __webpack_require__(264), __webpack_require__(265), __webpack_require__(266), __webpack_require__(263)) :
+	   true ? factory(exports, __webpack_require__(258), __webpack_require__(260), __webpack_require__(261), __webpack_require__(263), __webpack_require__(264), __webpack_require__(265), __webpack_require__(262)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'd3-array', 'd3-collection', 'd3-interpolate', 'd3-format', 'd3-time', 'd3-time-format', 'd3-color'], factory) :
 	  (factory((global.d3_scale = global.d3_scale || {}),global.d3_array,global.d3_collection,global.d3_interpolate,global.d3_format,global.d3_time,global.d3_time_format,global.d3_color));
 	}(this, function (exports,d3Array,d3Collection,d3Interpolate,d3Format,d3Time,d3TimeFormat,d3Color) { 'use strict';
@@ -30954,7 +30913,7 @@
 	}));
 
 /***/ },
-/* 261 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -31183,11 +31142,11 @@
 	}));
 
 /***/ },
-/* 262 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(263)) :
+	   true ? factory(exports, __webpack_require__(262)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'd3-color'], factory) :
 	  (factory((global.d3_interpolate = global.d3_interpolate || {}),global.d3_color));
 	}(this, function (exports,d3Color) { 'use strict';
@@ -31698,7 +31657,7 @@
 	}));
 
 /***/ },
-/* 263 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -32220,7 +32179,7 @@
 	}));
 
 /***/ },
-/* 264 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -32727,7 +32686,7 @@
 	}));
 
 /***/ },
-/* 265 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -33081,11 +33040,11 @@
 	}));
 
 /***/ },
-/* 266 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(265)) :
+	   true ? factory(exports, __webpack_require__(264)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'd3-time'], factory) :
 	  (factory((global.d3_time_format = global.d3_time_format || {}),global.d3_time));
 	}(this, function (exports,d3Time) { 'use strict';
@@ -33919,7 +33878,7 @@
 	}));
 
 /***/ },
-/* 267 */
+/* 266 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38055,6 +38014,2137 @@
 	  'name': 'Zulu Nut',
 	  'scientific': 'Cyperus esculentus',
 	  'family': 'Cyperaceae'
+	}];
+
+/***/ },
+/* 267 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var bls_earnings_data = exports.bls_earnings_data = [{
+	  "year": 2000,
+	  "earnings": 659,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2000,
+	  "earnings": 386,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2000,
+	  "earnings": 967,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2000,
+	  "earnings": 974,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2000,
+	  "earnings": 578,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2000,
+	  "earnings": 462,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2000,
+	  "earnings": 961,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2000,
+	  "earnings": 895,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2000,
+	  "earnings": 922,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2000,
+	  "earnings": 822,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2000,
+	  "earnings": 765,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2000,
+	  "earnings": 669,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2000,
+	  "earnings": 1328,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2000,
+	  "earnings": 1100,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2000,
+	  "earnings": 977,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2000,
+	  "earnings": 870,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2000,
+	  "earnings": 690,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2000,
+	  "earnings": 596,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2000,
+	  "earnings": 913,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2000,
+	  "earnings": 857,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2000,
+	  "earnings": 401,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2000,
+	  "earnings": 409,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2000,
+	  "earnings": 1129,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2000,
+	  "earnings": 1011,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2001,
+	  "earnings": 658,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2001,
+	  "earnings": 546,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2001,
+	  "earnings": 1105,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2001,
+	  "earnings": 712,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2001,
+	  "earnings": 682,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2001,
+	  "earnings": 476,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2001,
+	  "earnings": 998,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2001,
+	  "earnings": 882,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2001,
+	  "earnings": 1023,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2001,
+	  "earnings": 880,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2001,
+	  "earnings": 785,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2001,
+	  "earnings": 746,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2001,
+	  "earnings": 1369,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2001,
+	  "earnings": 1081,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2001,
+	  "earnings": 1047,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2001,
+	  "earnings": 867,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2001,
+	  "earnings": 685,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2001,
+	  "earnings": 540,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2001,
+	  "earnings": 947,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2001,
+	  "earnings": 654,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2001,
+	  "earnings": 488,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2001,
+	  "earnings": 420,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2001,
+	  "earnings": 1254,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2001,
+	  "earnings": 993,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2002,
+	  "earnings": 662,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2002,
+	  "earnings": 561,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2002,
+	  "earnings": 1176,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2002,
+	  "earnings": 1068,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2002,
+	  "earnings": 619,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2002,
+	  "earnings": 503,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2002,
+	  "earnings": 1045,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2002,
+	  "earnings": 884,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2002,
+	  "earnings": 1089,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2002,
+	  "earnings": 972,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2002,
+	  "earnings": 804,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2002,
+	  "earnings": 719,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2002,
+	  "earnings": 1472,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2002,
+	  "earnings": 1159,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2002,
+	  "earnings": 1078,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2002,
+	  "earnings": 891,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2002,
+	  "earnings": 697,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2002,
+	  "earnings": 631,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2002,
+	  "earnings": 1085,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2002,
+	  "earnings": 814,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2002,
+	  "earnings": 599,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2002,
+	  "earnings": 443,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2002,
+	  "earnings": 1291,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2002,
+	  "earnings": 1082,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2003,
+	  "earnings": 613,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2003,
+	  "earnings": 637,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2003,
+	  "earnings": 1137,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2003,
+	  "earnings": 822,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2003,
+	  "earnings": 685,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2003,
+	  "earnings": 515,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2003,
+	  "earnings": 1115,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2003,
+	  "earnings": 973,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2003,
+	  "earnings": 1073,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2003,
+	  "earnings": 869,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2003,
+	  "earnings": 769,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2003,
+	  "earnings": 727,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2003,
+	  "earnings": 1437,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2003,
+	  "earnings": 1280,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2003,
+	  "earnings": 1130,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2003,
+	  "earnings": 906,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2003,
+	  "earnings": 707,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2003,
+	  "earnings": 597,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2003,
+	  "earnings": 1007,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2003,
+	  "earnings": 807,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2003,
+	  "earnings": 536,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2003,
+	  "earnings": 450,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2003,
+	  "earnings": 1336,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2003,
+	  "earnings": 1005,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2004,
+	  "earnings": 630,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2004,
+	  "earnings": 748,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2004,
+	  "earnings": 1487,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2004,
+	  "earnings": 939,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2004,
+	  "earnings": 575,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2004,
+	  "earnings": 580,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2004,
+	  "earnings": 1151,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2004,
+	  "earnings": 1006,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2004,
+	  "earnings": 1092,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2004,
+	  "earnings": 902,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2004,
+	  "earnings": 850,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2004,
+	  "earnings": 813,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2004,
+	  "earnings": 1547,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2004,
+	  "earnings": 1228,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2004,
+	  "earnings": 1155,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2004,
+	  "earnings": 972,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2004,
+	  "earnings": 735,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2004,
+	  "earnings": 634,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2004,
+	  "earnings": 1064,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2004,
+	  "earnings": 971,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2004,
+	  "earnings": 524,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2004,
+	  "earnings": 409,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2004,
+	  "earnings": 1429,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2004,
+	  "earnings": 1149,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2005,
+	  "earnings": 716,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2005,
+	  "earnings": 513,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2005,
+	  "earnings": 1524,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2005,
+	  "earnings": 814,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2005,
+	  "earnings": 674,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2005,
+	  "earnings": 541,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2005,
+	  "earnings": 1129,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2005,
+	  "earnings": 1014,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2005,
+	  "earnings": 1140,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2005,
+	  "earnings": 983,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2005,
+	  "earnings": 809,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2005,
+	  "earnings": 858,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2005,
+	  "earnings": 1540,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2005,
+	  "earnings": 1094,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2005,
+	  "earnings": 1174,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2005,
+	  "earnings": 1007,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2005,
+	  "earnings": 749,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2005,
+	  "earnings": 825,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2005,
+	  "earnings": 1072,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2005,
+	  "earnings": 937,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2005,
+	  "earnings": 473,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2005,
+	  "earnings": 441,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2005,
+	  "earnings": 1456,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2005,
+	  "earnings": 1174,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2006,
+	  "earnings": 753,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2006,
+	  "earnings": 523,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2006,
+	  "earnings": 1331,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1192,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2006,
+	  "earnings": 654,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2006,
+	  "earnings": 573,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2006,
+	  "earnings": 1229,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1034,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1223,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2006,
+	  "earnings": 1039,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2006,
+	  "earnings": 878,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2006,
+	  "earnings": 755,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2006,
+	  "earnings": 1492,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1300,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1231,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2006,
+	  "earnings": 1043,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2006,
+	  "earnings": 760,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2006,
+	  "earnings": 679,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2006,
+	  "earnings": 1159,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2006,
+	  "earnings": 946,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2006,
+	  "earnings": 633,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2006,
+	  "earnings": 418,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2006,
+	  "earnings": 1410,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2006,
+	  "earnings": 1272,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2007,
+	  "earnings": 798,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2007,
+	  "earnings": 625,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2007,
+	  "earnings": 1352,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2007,
+	  "earnings": 988,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2007,
+	  "earnings": 628,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2007,
+	  "earnings": 562,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2007,
+	  "earnings": 1268,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2007,
+	  "earnings": 1074,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2007,
+	  "earnings": 1243,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2007,
+	  "earnings": 1041,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2007,
+	  "earnings": 905,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2007,
+	  "earnings": 764,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2007,
+	  "earnings": 1596,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2007,
+	  "earnings": 1363,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2007,
+	  "earnings": 1294,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2007,
+	  "earnings": 1047,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2007,
+	  "earnings": 777,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2007,
+	  "earnings": 656,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2007,
+	  "earnings": 1204,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2007,
+	  "earnings": 911,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2007,
+	  "earnings": 712,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2007,
+	  "earnings": 470,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2007,
+	  "earnings": 1509,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2007,
+	  "earnings": 1318,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2008,
+	  "earnings": 820,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2008,
+	  "earnings": 689,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2008,
+	  "earnings": 1431,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1165,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2008,
+	  "earnings": 749,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2008,
+	  "earnings": 632,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2008,
+	  "earnings": 1261,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1003,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1240,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2008,
+	  "earnings": 1082,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2008,
+	  "earnings": 903,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2008,
+	  "earnings": 878,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2008,
+	  "earnings": 1641,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1260,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1320,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2008,
+	  "earnings": 1088,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2008,
+	  "earnings": 805,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2008,
+	  "earnings": 890,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2008,
+	  "earnings": 1209,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2008,
+	  "earnings": 1118,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2008,
+	  "earnings": 495,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2008,
+	  "earnings": 600,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2008,
+	  "earnings": 1555,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2008,
+	  "earnings": 1351,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2009,
+	  "earnings": 745,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2009,
+	  "earnings": 622,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2009,
+	  "earnings": 1389,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2009,
+	  "earnings": 648,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2009,
+	  "earnings": 740,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2009,
+	  "earnings": 581,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2009,
+	  "earnings": 1267,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2009,
+	  "earnings": 1182,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2009,
+	  "earnings": 1268,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2009,
+	  "earnings": 1167,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2009,
+	  "earnings": 930,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2009,
+	  "earnings": 857,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2009,
+	  "earnings": 1788,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2009,
+	  "earnings": 1411,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2009,
+	  "earnings": 1304,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2009,
+	  "earnings": 1149,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2009,
+	  "earnings": 808,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2009,
+	  "earnings": 748,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2009,
+	  "earnings": 1109,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2009,
+	  "earnings": 1159,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2009,
+	  "earnings": 729,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2009,
+	  "earnings": 509,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2009,
+	  "earnings": 1550,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2009,
+	  "earnings": 1311,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2010,
+	  "earnings": 834,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2010,
+	  "earnings": 494,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2010,
+	  "earnings": 1525,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1113,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2010,
+	  "earnings": 866,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2010,
+	  "earnings": 654,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2010,
+	  "earnings": 1243,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1177,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1295,
+	  "sex": "Men",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2010,
+	  "earnings": 1013,
+	  "sex": "Women",
+	  "occupation": "Computer Scientists and Systems Analysts"
+	}, {
+	  "year": 2010,
+	  "earnings": 979,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2010,
+	  "earnings": 835,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2010,
+	  "earnings": 1729,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1415,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1349,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2010,
+	  "earnings": 1135,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2010,
+	  "earnings": 814,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2010,
+	  "earnings": 700,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2010,
+	  "earnings": 1224,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2010,
+	  "earnings": 1178,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2010,
+	  "earnings": 713,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2010,
+	  "earnings": 575,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2010,
+	  "earnings": 1590,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2010,
+	  "earnings": 1445,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2011,
+	  "earnings": 781,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2011,
+	  "earnings": 677,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2011,
+	  "earnings": 1546,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1150,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1585,
+	  "sex": "Men",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2011,
+	  "earnings": 1061,
+	  "sex": "Women",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2011,
+	  "earnings": 1165,
+	  "sex": "Men",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2011,
+	  "earnings": 998,
+	  "sex": "Women",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2011,
+	  "earnings": 853,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2011,
+	  "earnings": 651,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2011,
+	  "earnings": 1330,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1238,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2011,
+	  "earnings": 896,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2011,
+	  "earnings": 951,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2011,
+	  "earnings": 1410,
+	  "sex": "Men",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2011,
+	  "earnings": 1144,
+	  "sex": "Women",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2011,
+	  "earnings": 1688,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2011,
+	  "earnings": 1035,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2011,
+	  "earnings": 1595,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1543,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1369,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2011,
+	  "earnings": 1126,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2011,
+	  "earnings": 812,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2011,
+	  "earnings": 767,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2011,
+	  "earnings": 1243,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2011,
+	  "earnings": 966,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2011,
+	  "earnings": 604,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2011,
+	  "earnings": 505,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2011,
+	  "earnings": 1606,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2011,
+	  "earnings": 1388,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2011,
+	  "earnings": 1033,
+	  "sex": "Men",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2011,
+	  "earnings": 953,
+	  "sex": "Women",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2012,
+	  "earnings": 728,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2012,
+	  "earnings": 1571,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2012,
+	  "earnings": 1569,
+	  "sex": "Men",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2012,
+	  "earnings": 1155,
+	  "sex": "Men",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2012,
+	  "earnings": 887,
+	  "sex": "Women",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2012,
+	  "earnings": 1363,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2012,
+	  "earnings": 1148,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2012,
+	  "earnings": 985,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2012,
+	  "earnings": 881,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2012,
+	  "earnings": 1477,
+	  "sex": "Men",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2012,
+	  "earnings": 1254,
+	  "sex": "Women",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2012,
+	  "earnings": 1740,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2012,
+	  "earnings": 1527,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2012,
+	  "earnings": 1414,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2012,
+	  "earnings": 1146,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2012,
+	  "earnings": 880,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2012,
+	  "earnings": 1253,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2012,
+	  "earnings": 1056,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2012,
+	  "earnings": 1674,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2012,
+	  "earnings": 1362,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2012,
+	  "earnings": 1204,
+	  "sex": "Men",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2012,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2013,
+	  "earnings": 859,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2013,
+	  "earnings": 1544,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1593,
+	  "sex": "Men",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2013,
+	  "earnings": 1136,
+	  "sex": "Men",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2013,
+	  "earnings": 1176,
+	  "sex": "Women",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2013,
+	  "earnings": 1428,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1162,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1019,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2013,
+	  "earnings": 901,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2013,
+	  "earnings": 1455,
+	  "sex": "Men",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2013,
+	  "earnings": 1216,
+	  "sex": "Women",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2013,
+	  "earnings": 1769,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1549,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1452,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2013,
+	  "earnings": 1174,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2013,
+	  "earnings": 894,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2013,
+	  "earnings": 1252,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2013,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2013,
+	  "earnings": 1737,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2013,
+	  "earnings": 1370,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2013,
+	  "earnings": 1157,
+	  "sex": "Men",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2013,
+	  "earnings": 937,
+	  "sex": "Women",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2014,
+	  "earnings": 790,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2014,
+	  "earnings": 1795,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1650,
+	  "sex": "Men",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2014,
+	  "earnings": 1122,
+	  "sex": "Men",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2014,
+	  "earnings": 984,
+	  "sex": "Women",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2014,
+	  "earnings": 1447,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1253,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1049,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2014,
+	  "earnings": 837,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2014,
+	  "earnings": 1460,
+	  "sex": "Men",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2014,
+	  "earnings": 1259,
+	  "sex": "Women",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2014,
+	  "earnings": 1763,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1529,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1435,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2014,
+	  "earnings": 1165,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2014,
+	  "earnings": 889,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2014,
+	  "earnings": 1286,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2014,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2014,
+	  "earnings": 1736,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2014,
+	  "earnings": 1457,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2014,
+	  "earnings": 1245,
+	  "sex": "Men",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2014,
+	  "earnings": 988,
+	  "sex": "Women",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2015,
+	  "earnings": 857,
+	  "sex": "Men",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Control Programmers and Operators"
+	}, {
+	  "year": 2015,
+	  "earnings": 1871,
+	  "sex": "Men",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Hardware Engineers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1577,
+	  "sex": "Men",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Network Architects"
+	}, {
+	  "year": 2015,
+	  "earnings": 1252,
+	  "sex": "Men",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2015,
+	  "earnings": 1145,
+	  "sex": "Women",
+	  "occupation": "Computer Occupations, All Other"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer Operators"
+	}, {
+	  "year": 2015,
+	  "earnings": 1501,
+	  "sex": "Men",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1302,
+	  "sex": "Women",
+	  "occupation": "Computer Programmers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1135,
+	  "sex": "Men",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2015,
+	  "earnings": 908,
+	  "sex": "Women",
+	  "occupation": "Computer Support Specialists"
+	}, {
+	  "year": 2015,
+	  "earnings": 1462,
+	  "sex": "Men",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2015,
+	  "earnings": 1256,
+	  "sex": "Women",
+	  "occupation": "Computer Systems Analysts"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Research Scientists"
+	}, {
+	  "year": 2015,
+	  "earnings": 1817,
+	  "sex": "Men",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1563,
+	  "sex": "Women",
+	  "occupation": "Computer and Information Systems Managers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1503,
+	  "sex": "Men",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2015,
+	  "earnings": 1245,
+	  "sex": "Women",
+	  "occupation": "Computer and Mathematical Occupations"
+	}, {
+	  "year": 2015,
+	  "earnings": 865,
+	  "sex": "Men",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Computer, Automated Teller, and Office Machine Repairers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1266,
+	  "sex": "Men",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Network and Computer Systems Administrators"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Men",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2015,
+	  "earnings": null,
+	  "sex": "Women",
+	  "occupation": "Office Machine Operators, Except Computer"
+	}, {
+	  "year": 2015,
+	  "earnings": 1751,
+	  "sex": "Men",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2015,
+	  "earnings": 1415,
+	  "sex": "Women",
+	  "occupation": "Software Developers, Applications and Systems Software"
+	}, {
+	  "year": 2015,
+	  "earnings": 1233,
+	  "sex": "Men",
+	  "occupation": "Web Developers"
+	}, {
+	  "year": 2015,
+	  "earnings": 1026,
+	  "sex": "Women",
+	  "occupation": "Web Developers"
 	}];
 
 /***/ },
@@ -46209,12 +48299,12 @@
 	var ReactPerf = __webpack_require__(581);
 	var ReactReconciler = __webpack_require__(582);
 	var ReactUpdates = __webpack_require__(578);
-	var ReactVersion = __webpack_require__(118);
+	var ReactVersion = __webpack_require__(117);
 	
 	var findDOMNode = __webpack_require__(685);
 	var getNativeComponentFromComposite = __webpack_require__(686);
 	var renderSubtreeIntoContainer = __webpack_require__(687);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	ReactDefaultInjection.inject();
 	
@@ -46313,7 +48403,7 @@
 	var DOMProperty = __webpack_require__(568);
 	var ReactDOMComponentFlags = __webpack_require__(569);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
 	var Flags = ReactDOMComponentFlags;
@@ -46501,7 +48591,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	function checkMask(value, bitmask) {
 	  return (value & bitmask) === bitmask;
@@ -46840,14 +48930,14 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPropagators = __webpack_require__(131);
+	var EventConstants = __webpack_require__(125);
+	var EventPropagators = __webpack_require__(130);
 	var ExecutionEnvironment = __webpack_require__(572);
 	var FallbackCompositionState = __webpack_require__(573);
 	var SyntheticCompositionEvent = __webpack_require__(575);
 	var SyntheticInputEvent = __webpack_require__(576);
 	
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 	var START_KEYCODE = 229;
@@ -47273,9 +49363,9 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	
 	var getTextContentAccessor = __webpack_require__(574);
 	
@@ -47411,7 +49501,7 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	/**
 	 * @interface Event
@@ -47452,7 +49542,7 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	/**
 	 * @interface Event
@@ -47494,18 +49584,18 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPluginHub = __webpack_require__(123);
-	var EventPropagators = __webpack_require__(131);
+	var EventConstants = __webpack_require__(125);
+	var EventPluginHub = __webpack_require__(122);
+	var EventPropagators = __webpack_require__(130);
 	var ExecutionEnvironment = __webpack_require__(572);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactUpdates = __webpack_require__(578);
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
-	var getEventTarget = __webpack_require__(134);
+	var getEventTarget = __webpack_require__(133);
 	var isEventSupported = __webpack_require__(586);
 	var isTextInputElement = __webpack_require__(587);
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	
 	var topLevelTypes = EventConstants.topLevelTypes;
 	
@@ -47824,16 +49914,16 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var CallbackQueue = __webpack_require__(579);
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	var ReactFeatureFlags = __webpack_require__(580);
 	var ReactPerf = __webpack_require__(581);
 	var ReactReconciler = __webpack_require__(582);
 	var Transaction = __webpack_require__(585);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var dirtyComponents = [];
 	var asapCallbackQueue = CallbackQueue.getPooled();
@@ -48070,11 +50160,11 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * A specialized pseudo-event module to help keep track of components waiting to
@@ -48308,7 +50398,7 @@
 	'use strict';
 	
 	var ReactRef = __webpack_require__(583);
-	var ReactInstrumentation = __webpack_require__(105);
+	var ReactInstrumentation = __webpack_require__(104);
 	
 	/**
 	 * Helper to call ReactRef.attachRefs with this composite component, split out
@@ -48525,7 +50615,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * ReactOwners are capable of storing references to owned components.
@@ -48622,7 +50712,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * `Transaction` creates a black box that is able to wrap any method such that
@@ -48969,7 +51059,7 @@
 	
 	'use strict';
 	
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	
 	/**
 	 * Module that is injectable into `EventPluginHub`, that specifies a
@@ -49001,12 +51091,12 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPropagators = __webpack_require__(131);
+	var EventConstants = __webpack_require__(125);
+	var EventPropagators = __webpack_require__(130);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var SyntheticMouseEvent = __webpack_require__(590);
 	
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	
 	var topLevelTypes = EventConstants.topLevelTypes;
 	
@@ -49111,8 +51201,8 @@
 	
 	'use strict';
 	
-	var SyntheticUIEvent = __webpack_require__(132);
-	var ViewportMetrics = __webpack_require__(136);
+	var SyntheticUIEvent = __webpack_require__(131);
+	var ViewportMetrics = __webpack_require__(135);
 	
 	var getEventModifierState = __webpack_require__(591);
 	
@@ -49989,9 +52079,9 @@
 	var ExecutionEnvironment = __webpack_require__(572);
 	
 	var createNodesFromMarkup = __webpack_require__(601);
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	var getMarkupWrap = __webpack_require__(603);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var OPEN_TAG_NAME_EXP = /^(<[^ \/>]+)/;
 	var RESULT_INDEX_ATTR = 'data-danger-index';
@@ -50140,7 +52230,7 @@
 	
 	var createArrayFromMixed = __webpack_require__(602);
 	var getMarkupWrap = __webpack_require__(603);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Dummy container used to render all markup.
@@ -50222,7 +52312,7 @@
 	 * @typechecks
 	 */
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Convert array-like objects to arrays.
@@ -50356,7 +52446,7 @@
 	
 	var ExecutionEnvironment = __webpack_require__(572);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Dummy container used to detect which wraps are necessary.
@@ -50452,7 +52542,7 @@
 	
 	'use strict';
 	
-	var keyMirror = __webpack_require__(111);
+	var keyMirror = __webpack_require__(110);
 	
 	/**
 	 * When a component's children are updated, a series of update configuration
@@ -50535,7 +52625,7 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var AutoFocusUtils = __webpack_require__(607);
 	var CSSPropertyOperations = __webpack_require__(609);
@@ -50543,9 +52633,9 @@
 	var DOMNamespaces = __webpack_require__(617);
 	var DOMProperty = __webpack_require__(568);
 	var DOMPropertyOperations = __webpack_require__(618);
-	var EventConstants = __webpack_require__(126);
-	var EventPluginHub = __webpack_require__(123);
-	var EventPluginRegistry = __webpack_require__(124);
+	var EventConstants = __webpack_require__(125);
+	var EventPluginHub = __webpack_require__(122);
+	var EventPluginRegistry = __webpack_require__(123);
 	var ReactBrowserEventEmitter = __webpack_require__(623);
 	var ReactComponentBrowserEnvironment = __webpack_require__(593);
 	var ReactDOMButton = __webpack_require__(626);
@@ -50559,12 +52649,12 @@
 	var ReactPerf = __webpack_require__(581);
 	
 	var escapeTextContentForBrowser = __webpack_require__(598);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	var isEventSupported = __webpack_require__(586);
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	var shallowEqual = __webpack_require__(645);
 	var validateDOMNesting = __webpack_require__(646);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var Flags = ReactDOMComponentFlags;
 	var deleteListener = EventPluginHub.deleteListener;
@@ -51515,7 +53605,7 @@
 	var dangerousStyleValue = __webpack_require__(613);
 	var hyphenateStyleName = __webpack_require__(614);
 	var memoizeStringOnly = __webpack_require__(616);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var processStyleName = memoizeStringOnly(function (styleName) {
 	  return hyphenateStyleName(styleName);
@@ -51951,7 +54041,7 @@
 	'use strict';
 	
 	var CSSProperty = __webpack_require__(610);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
 	var styleWarnings = {};
@@ -52176,7 +54266,7 @@
 	var ReactPerf = __webpack_require__(581);
 	
 	var quoteAttributeValueForBrowser = __webpack_require__(622);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
 	var illegalAttributeNameCache = {};
@@ -52412,7 +54502,7 @@
 	
 	var ReactDOMUnknownPropertyDevtool = __webpack_require__(621);
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var eventHandlers = [];
 	var handlerDoesThrowForEvent = {};
@@ -52477,9 +54567,9 @@
 	'use strict';
 	
 	var DOMProperty = __webpack_require__(568);
-	var EventPluginRegistry = __webpack_require__(124);
+	var EventPluginRegistry = __webpack_require__(123);
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	if (true) {
 	  var reactProps = {
@@ -52576,12 +54666,12 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPluginRegistry = __webpack_require__(124);
+	var EventConstants = __webpack_require__(125);
+	var EventPluginRegistry = __webpack_require__(123);
 	var ReactEventEmitterMixin = __webpack_require__(624);
-	var ViewportMetrics = __webpack_require__(136);
+	var ViewportMetrics = __webpack_require__(135);
 	
 	var getVendorPrefixedEventName = __webpack_require__(625);
 	var isEventSupported = __webpack_require__(586);
@@ -52898,7 +54988,7 @@
 	
 	'use strict';
 	
-	var EventPluginHub = __webpack_require__(123);
+	var EventPluginHub = __webpack_require__(122);
 	
 	function runEventQueueInBatch(events) {
 	  EventPluginHub.enqueueEvents(events);
@@ -53126,7 +55216,7 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DisabledInputUtils = __webpack_require__(627);
 	var DOMPropertyOperations = __webpack_require__(618);
@@ -53134,8 +55224,8 @@
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	var didWarnValueLink = false;
 	var didWarnCheckedLink = false;
@@ -53335,11 +55425,11 @@
 	
 	'use strict';
 	
-	var ReactPropTypes = __webpack_require__(117);
-	var ReactPropTypeLocations = __webpack_require__(110);
+	var ReactPropTypes = __webpack_require__(116);
+	var ReactPropTypeLocations = __webpack_require__(109);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	var hasReadOnlyValue = {
 	  'button': true,
@@ -53473,13 +55563,13 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var ReactChildren = __webpack_require__(92);
+	var ReactChildren = __webpack_require__(91);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactDOMSelect = __webpack_require__(631);
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * Implements an <option> native component that warns when `selected` is set.
@@ -53587,14 +55677,14 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DisabledInputUtils = __webpack_require__(627);
 	var LinkedValueUtils = __webpack_require__(629);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var didWarnValueLink = false;
 	var didWarnValueNull = false;
@@ -53805,7 +55895,7 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DisabledInputUtils = __webpack_require__(627);
 	var DOMPropertyOperations = __webpack_require__(618);
@@ -53813,8 +55903,8 @@
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	var didWarnValueLink = false;
 	var didWarnValueNull = false;
@@ -53955,12 +56045,12 @@
 	var ReactComponentEnvironment = __webpack_require__(634);
 	var ReactMultiChildUpdateTypes = __webpack_require__(604);
 	
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactCurrentOwner = __webpack_require__(95);
 	var ReactReconciler = __webpack_require__(582);
 	var ReactChildReconciler = __webpack_require__(635);
 	
 	var flattenChildren = __webpack_require__(644);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Make an update for markup to be rendered and inserted at a supplied index.
@@ -54359,7 +56449,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var injected = false;
 	
@@ -54418,10 +56508,10 @@
 	var ReactReconciler = __webpack_require__(582);
 	
 	var instantiateReactComponent = __webpack_require__(636);
-	var KeyEscapeUtils = __webpack_require__(102);
+	var KeyEscapeUtils = __webpack_require__(101);
 	var shouldUpdateReactComponent = __webpack_require__(641);
-	var traverseAllChildren = __webpack_require__(100);
-	var warning = __webpack_require__(97);
+	var traverseAllChildren = __webpack_require__(99);
+	var warning = __webpack_require__(96);
 	
 	function instantiateChild(childInstances, child, name) {
 	  // We found a component instance.
@@ -54545,14 +56635,14 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var ReactCompositeComponent = __webpack_require__(637);
 	var ReactEmptyComponent = __webpack_require__(642);
 	var ReactNativeComponent = __webpack_require__(643);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	// To avoid a cyclic dependency, we create the final class in this module
 	var ReactCompositeComponentWrapper = function (element) {
@@ -54661,25 +56751,25 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var ReactComponentEnvironment = __webpack_require__(634);
-	var ReactCurrentOwner = __webpack_require__(96);
-	var ReactElement = __webpack_require__(95);
-	var ReactErrorUtils = __webpack_require__(127);
+	var ReactCurrentOwner = __webpack_require__(95);
+	var ReactElement = __webpack_require__(94);
+	var ReactErrorUtils = __webpack_require__(126);
 	var ReactInstanceMap = __webpack_require__(638);
-	var ReactInstrumentation = __webpack_require__(105);
+	var ReactInstrumentation = __webpack_require__(104);
 	var ReactNodeTypes = __webpack_require__(639);
 	var ReactPerf = __webpack_require__(581);
-	var ReactPropTypeLocations = __webpack_require__(110);
-	var ReactPropTypeLocationNames = __webpack_require__(112);
+	var ReactPropTypeLocations = __webpack_require__(109);
+	var ReactPropTypeLocationNames = __webpack_require__(111);
 	var ReactReconciler = __webpack_require__(582);
 	var ReactUpdateQueue = __webpack_require__(640);
 	
-	var emptyObject = __webpack_require__(108);
-	var invariant = __webpack_require__(94);
+	var emptyObject = __webpack_require__(107);
+	var invariant = __webpack_require__(93);
 	var shouldUpdateReactComponent = __webpack_require__(641);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	function getDeclarationErrorAddendum(component) {
 	  var owner = component._currentElement._owner || null;
@@ -55513,9 +57603,9 @@
 	
 	'use strict';
 	
-	var ReactElement = __webpack_require__(95);
+	var ReactElement = __webpack_require__(94);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var ReactNodeTypes = {
 	  NATIVE: 0,
@@ -55555,12 +57645,12 @@
 	
 	'use strict';
 	
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactCurrentOwner = __webpack_require__(95);
 	var ReactInstanceMap = __webpack_require__(638);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	function enqueueUpdate(internalInstance) {
 	  ReactUpdates.enqueueUpdate(internalInstance);
@@ -55857,9 +57947,9 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	var autoGenerateWrapperClass = null;
 	var genericComponentClass = null;
@@ -55957,9 +58047,9 @@
 	
 	'use strict';
 	
-	var KeyEscapeUtils = __webpack_require__(102);
-	var traverseAllChildren = __webpack_require__(100);
-	var warning = __webpack_require__(97);
+	var KeyEscapeUtils = __webpack_require__(101);
+	var traverseAllChildren = __webpack_require__(99);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * @param {function} traverseContext Context passed through traversal.
@@ -56082,10 +58172,10 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var emptyFunction = __webpack_require__(98);
-	var warning = __webpack_require__(97);
+	var emptyFunction = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var validateDOMNesting = emptyFunction;
 	
@@ -56456,7 +58546,7 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DOMLazyTree = __webpack_require__(595);
 	var ReactDOMComponentTree = __webpack_require__(567);
@@ -56521,7 +58611,7 @@
 	
 	'use strict';
 	
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	
 	/**
 	 * Return the lowest common ancestor of A and B, or null if they are in
@@ -56660,7 +58750,7 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DOMChildrenOperations = __webpack_require__(594);
 	var DOMLazyTree = __webpack_require__(595);
@@ -56668,7 +58758,7 @@
 	var ReactPerf = __webpack_require__(581);
 	
 	var escapeTextContentForBrowser = __webpack_require__(598);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	var validateDOMNesting = __webpack_require__(646);
 	
 	/**
@@ -56834,12 +58924,12 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var ReactUpdates = __webpack_require__(578);
 	var Transaction = __webpack_require__(585);
 	
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	
 	var RESET_BATCHED_UPDATES = {
 	  initialize: emptyFunction,
@@ -56907,15 +58997,15 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var EventListener = __webpack_require__(652);
 	var ExecutionEnvironment = __webpack_require__(572);
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var getEventTarget = __webpack_require__(134);
+	var getEventTarget = __webpack_require__(133);
 	var getUnboundedScrollPosition = __webpack_require__(653);
 	
 	/**
@@ -57076,7 +59166,7 @@
 	 * @typechecks
 	 */
 	
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	
 	/**
 	 * Upstream version of event listener. Does not take into account specific
@@ -57201,10 +59291,10 @@
 	'use strict';
 	
 	var DOMProperty = __webpack_require__(568);
-	var EventPluginHub = __webpack_require__(123);
-	var EventPluginUtils = __webpack_require__(125);
+	var EventPluginHub = __webpack_require__(122);
+	var EventPluginUtils = __webpack_require__(124);
 	var ReactComponentEnvironment = __webpack_require__(634);
-	var ReactClass = __webpack_require__(109);
+	var ReactClass = __webpack_require__(108);
 	var ReactEmptyComponent = __webpack_require__(642);
 	var ReactBrowserEventEmitter = __webpack_require__(623);
 	var ReactNativeComponent = __webpack_require__(643);
@@ -57243,10 +59333,10 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var CallbackQueue = __webpack_require__(579);
-	var PooledClass = __webpack_require__(93);
+	var PooledClass = __webpack_require__(92);
 	var ReactBrowserEventEmitter = __webpack_require__(623);
 	var ReactInputSelection = __webpack_require__(656);
 	var Transaction = __webpack_require__(585);
@@ -58279,16 +60369,16 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
-	var EventPropagators = __webpack_require__(131);
+	var EventConstants = __webpack_require__(125);
+	var EventPropagators = __webpack_require__(130);
 	var ExecutionEnvironment = __webpack_require__(572);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactInputSelection = __webpack_require__(656);
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	var getActiveElement = __webpack_require__(662);
 	var isTextInputElement = __webpack_require__(587);
-	var keyOf = __webpack_require__(113);
+	var keyOf = __webpack_require__(112);
 	var shallowEqual = __webpack_require__(645);
 	
 	var topLevelTypes = EventConstants.topLevelTypes;
@@ -58480,26 +60570,26 @@
 	
 	'use strict';
 	
-	var EventConstants = __webpack_require__(126);
+	var EventConstants = __webpack_require__(125);
 	var EventListener = __webpack_require__(652);
-	var EventPropagators = __webpack_require__(131);
+	var EventPropagators = __webpack_require__(130);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var SyntheticAnimationEvent = __webpack_require__(666);
 	var SyntheticClipboardEvent = __webpack_require__(667);
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	var SyntheticFocusEvent = __webpack_require__(668);
 	var SyntheticKeyboardEvent = __webpack_require__(669);
 	var SyntheticMouseEvent = __webpack_require__(590);
 	var SyntheticDragEvent = __webpack_require__(672);
 	var SyntheticTouchEvent = __webpack_require__(673);
 	var SyntheticTransitionEvent = __webpack_require__(674);
-	var SyntheticUIEvent = __webpack_require__(132);
+	var SyntheticUIEvent = __webpack_require__(131);
 	var SyntheticWheelEvent = __webpack_require__(675);
 	
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	var getEventCharCode = __webpack_require__(670);
-	var invariant = __webpack_require__(94);
-	var keyOf = __webpack_require__(113);
+	var invariant = __webpack_require__(93);
+	var keyOf = __webpack_require__(112);
 	
 	var topLevelTypes = EventConstants.topLevelTypes;
 	
@@ -59112,7 +61202,7 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	/**
 	 * @interface Event
@@ -59156,7 +61246,7 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	/**
 	 * @interface Event
@@ -59199,7 +61289,7 @@
 	
 	'use strict';
 	
-	var SyntheticUIEvent = __webpack_require__(132);
+	var SyntheticUIEvent = __webpack_require__(131);
 	
 	/**
 	 * @interface FocusEvent
@@ -59240,7 +61330,7 @@
 	
 	'use strict';
 	
-	var SyntheticUIEvent = __webpack_require__(132);
+	var SyntheticUIEvent = __webpack_require__(131);
 	
 	var getEventCharCode = __webpack_require__(670);
 	var getEventKey = __webpack_require__(671);
@@ -59532,7 +61622,7 @@
 	
 	'use strict';
 	
-	var SyntheticUIEvent = __webpack_require__(132);
+	var SyntheticUIEvent = __webpack_require__(131);
 	
 	var getEventModifierState = __webpack_require__(591);
 	
@@ -59582,7 +61672,7 @@
 	
 	'use strict';
 	
-	var SyntheticEvent = __webpack_require__(133);
+	var SyntheticEvent = __webpack_require__(132);
 	
 	/**
 	 * @interface Event
@@ -59692,7 +61782,7 @@
 	var ReactPerf = __webpack_require__(581);
 	
 	var performanceNow = __webpack_require__(683);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	function roundFloat(val) {
 	  return Math.floor(val * 100) / 100;
@@ -60008,7 +62098,7 @@
 	
 	// Don't try to save users less than 1.2ms (a number I made up)
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
 	var DONT_CARE_THRESHOLD = 1.2;
 	var DOM_OPERATION_TYPES = {
@@ -60224,25 +62314,25 @@
 	var DOMLazyTree = __webpack_require__(595);
 	var DOMProperty = __webpack_require__(568);
 	var ReactBrowserEventEmitter = __webpack_require__(623);
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactCurrentOwner = __webpack_require__(95);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactDOMContainerInfo = __webpack_require__(679);
 	var ReactDOMFeatureFlags = __webpack_require__(680);
-	var ReactElement = __webpack_require__(95);
+	var ReactElement = __webpack_require__(94);
 	var ReactFeatureFlags = __webpack_require__(580);
-	var ReactInstrumentation = __webpack_require__(105);
+	var ReactInstrumentation = __webpack_require__(104);
 	var ReactMarkupChecksum = __webpack_require__(681);
 	var ReactPerf = __webpack_require__(581);
 	var ReactReconciler = __webpack_require__(582);
 	var ReactUpdateQueue = __webpack_require__(640);
 	var ReactUpdates = __webpack_require__(578);
 	
-	var emptyObject = __webpack_require__(108);
+	var emptyObject = __webpack_require__(107);
 	var instantiateReactComponent = __webpack_require__(636);
-	var invariant = __webpack_require__(94);
+	var invariant = __webpack_require__(93);
 	var setInnerHTML = __webpack_require__(599);
 	var shouldUpdateReactComponent = __webpack_require__(641);
-	var warning = __webpack_require__(97);
+	var warning = __webpack_require__(96);
 	
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
 	var ROOT_ATTR_NAME = DOMProperty.ROOT_ATTRIBUTE_NAME;
@@ -60933,13 +63023,13 @@
 	
 	'use strict';
 	
-	var ReactCurrentOwner = __webpack_require__(96);
+	var ReactCurrentOwner = __webpack_require__(95);
 	var ReactDOMComponentTree = __webpack_require__(567);
 	var ReactInstanceMap = __webpack_require__(638);
 	
 	var getNativeComponentFromComposite = __webpack_require__(686);
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * Returns the DOM node rendered by this element.
@@ -61064,7 +63154,7 @@
 	exports.__esModule = true;
 	exports["default"] = undefined;
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _storeShape = __webpack_require__(690);
 	
@@ -61146,7 +63236,7 @@
 	
 	exports.__esModule = true;
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	exports["default"] = _react.PropTypes.shape({
 	  subscribe: _react.PropTypes.func.isRequired,
@@ -61194,7 +63284,7 @@
 	exports.__esModule = true;
 	exports["default"] = connect;
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _storeShape = __webpack_require__(690);
 	
@@ -61212,7 +63302,7 @@
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _isPlainObject = __webpack_require__(141);
+	var _isPlainObject = __webpack_require__(140);
 	
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 	
@@ -61621,7 +63711,7 @@
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 	
-	var _redux = __webpack_require__(139);
+	var _redux = __webpack_require__(138);
 	
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -61750,7 +63840,7 @@
 	
 	var _reactRedux = __webpack_require__(688);
 	
-	var _actions = __webpack_require__(153);
+	var _actions = __webpack_require__(152);
 	
 	var _Card = __webpack_require__(698);
 	
@@ -61762,7 +63852,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var func = _React$PropTypes.func;
 	var array = _React$PropTypes.array;
@@ -61781,22 +63871,26 @@
 	var YAxis = __webpack_require__(776);
 	var Path = __webpack_require__(778);
 	
-	var _require2 = __webpack_require__(266);
+	var _require2 = __webpack_require__(265);
 	
 	var utcFormat = _require2.utcFormat;
 	
 	var dateFormat = utcFormat('%-d/%-m/%Y');
 	
-	var _require3 = __webpack_require__(264);
+	var _require3 = __webpack_require__(263);
 	
 	var format = _require3.format;
 	
 	var numberFormat = format(',');
 	var percentFormat = format('.1p');
 	
-	var _require4 = __webpack_require__(260);
+	var _require4 = __webpack_require__(259);
 	
 	var scaleOrdinal = _require4.scaleOrdinal;
+	
+	var _require5 = __webpack_require__(779);
+	
+	var hex_colors = _require5.hex_colors;
 	
 	
 	var App = React.createClass({
@@ -61804,7 +63898,7 @@
 	  getInitialState: function getInitialState() {
 	    var colors = scaleOrdinal().domain(this.props.names.map(function (d) {
 	      return d.name;
-	    })).range(['#9C6744', '#C9BEB9', '#CFA07E', '#C4BAA1', '#C2B6BF', '#8FB5AA', '#85889E', '#9C7989', '#91919C', '#99677B', '#918A59', '#6E676C', '#6E4752', '#6B4A2F', '#998476', '#8A968D', '#968D8A', '#968D96', '#CC855C', '#967860', '#929488', '#949278', '#A0A3BD', '#BD93A1', '#65666B', '#6B5745', '#6B6664', '#695C52', '#56695E', '#69545C', '#565A69', '#696043', '#63635C', '#636150', '#333131', '#332820', '#302D30', '#302D1F', '#2D302F', '#CFB6A3']);
+	    })).range(hex_colors);
 	    return { duration: 1000, colorMap: colors, activeName: '' };
 	  },
 	
@@ -61863,6 +63957,7 @@
 	    var activeName = _state.activeName;
 	
 	
+	    console.log(mounted);
 	    var pathNodes = Object.keys(mounted).map(function (key) {
 	      var node = mounted[key];
 	      return React.createElement(Path, {
@@ -61926,70 +64021,57 @@
 	        { className: 'row', style: { marginLeft: 0, marginRight: 0 } },
 	        React.createElement(
 	          'div',
-	          { className: 'col-md-5 col-sm-5' },
+	          { className: 'col-md-2 col-sm-2', style: { paddingLeft: 20 } },
 	          React.createElement(
-	            'div',
-	            { className: 'row' },
-	            React.createElement(
-	              'div',
-	              { className: 'col-md-5 col-sm-5', style: { paddingLeft: 20 } },
-	              React.createElement(
-	                'span',
-	                null,
-	                'Chart Offset:'
-	              ),
-	              React.createElement(
-	                _RadioButton.RadioButtonGroup,
-	                {
-	                  name: 'offsets',
-	                  valueSelected: offset,
-	                  onChange: function onChange(e, d) {
-	                    return dispatch((0, _actions.changeOffset)(d));
-	                  }
-	                },
-	                React.createElement(_RadioButton.RadioButton, {
-	                  value: 'stacked',
-	                  label: 'Stacked'
-	                }),
-	                React.createElement(_RadioButton.RadioButton, {
-	                  value: 'stream',
-	                  label: 'Stream'
-	                }),
-	                React.createElement(_RadioButton.RadioButton, {
-	                  value: 'expand',
-	                  label: 'Expand'
-	                })
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'col-md-7 col-sm-7' },
-	              React.createElement(
-	                'span',
-	                null,
-	                'Transition Duration: ',
-	                (duration / 1000).toFixed(1)
-	              ),
-	              React.createElement(_Slider2.default, {
-	                style: { marginTop: 10, marginBottom: 10 },
-	                defaultValue: 0.1,
-	                onChange: this.setDuration
-	              })
-	            )
+	            'span',
+	            null,
+	            'Chart Offset:'
+	          ),
+	          React.createElement(
+	            _RadioButton.RadioButtonGroup,
+	            {
+	              name: 'offsets',
+	              valueSelected: offset,
+	              onChange: function onChange(e, d) {
+	                return dispatch((0, _actions.changeOffset)(d));
+	              }
+	            },
+	            React.createElement(_RadioButton.RadioButton, {
+	              value: 'stacked',
+	              label: 'Stacked'
+	            }),
+	            React.createElement(_RadioButton.RadioButton, {
+	              value: 'stream',
+	              label: 'Stream'
+	            }),
+	            React.createElement(_RadioButton.RadioButton, {
+	              value: 'expand',
+	              label: 'Expand'
+	            })
 	          )
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'col-md-7 col-sm-7' },
+	          { className: 'col-md-10 col-sm-10' },
 	          React.createElement(
 	            'h4',
 	            { style: { margin: 0 } },
-	            'Hello'
+	            'As Women Take Over a Male-Dominated Field, the Pay Drops'
 	          ),
 	          React.createElement(
 	            'p',
 	            null,
-	            'fake data'
+	            'Occupations with a greater share of females pay less than those with a lower share, controlling for education and skill. This association is explained by two dominant views: devaluation and queuing. The former views the pay offered in an occupation to affect its female proportion, due to employers’ preference for men– a gendered labor queue. The latter argues that the proportion of females in an occupation affects pay, owing to devaluation of work done by women. Only a few past studies used longitudinal data, which is needed to test the theories. We use fixed-effects models, thus controlling for stable characteristics of occupations, and U.S. Census data from 1950 through 2000. We find substantial evidence for the devaluation view, but only scant evidence for the queuing view.',
+	            React.createElement(
+	              'a',
+	              { href: 'http://sf.oxfordjournals.org/content/88/2/865.full.pdf+html' },
+	              'article'
+	            ),
+	            React.createElement(
+	              'a',
+	              { href: 'http://www.bls.gov/cps/cps_aa2002.htm' },
+	              'BLS Data'
+	            )
 	          )
 	        )
 	      ),
@@ -62130,7 +64212,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -62359,7 +64441,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -62486,7 +64568,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var horizontal = _react.PropTypes.oneOf(['left', 'middle', 'right']);
 	var vertical = _react.PropTypes.oneOf(['top', 'center', 'bottom']);
@@ -62567,7 +64649,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -62651,7 +64733,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -62719,7 +64801,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _createHelper = __webpack_require__(709);
 	
@@ -62886,7 +64968,7 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -63043,7 +65125,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -63193,7 +65275,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -63256,7 +65338,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -63578,7 +65660,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -63959,7 +66041,7 @@
 	exports.createChildFragment = createChildFragment;
 	exports.extendChildren = extendChildren;
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -64023,12 +66105,12 @@
 	
 	'use strict';
 	
-	var ReactChildren = __webpack_require__(92);
-	var ReactElement = __webpack_require__(95);
+	var ReactChildren = __webpack_require__(91);
+	var ReactElement = __webpack_require__(94);
 	
-	var emptyFunction = __webpack_require__(98);
-	var invariant = __webpack_require__(94);
-	var warning = __webpack_require__(97);
+	var emptyFunction = __webpack_require__(97);
+	var invariant = __webpack_require__(93);
+	var warning = __webpack_require__(96);
 	
 	/**
 	 * We used to allow keyed objects to serve as a collection of ReactElements,
@@ -64287,7 +66369,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -64493,7 +66575,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -64616,12 +66698,12 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var React = __webpack_require__(90);
+	var React = __webpack_require__(89);
 	var ReactTransitionChildMapping = __webpack_require__(732);
 	
-	var emptyFunction = __webpack_require__(98);
+	var emptyFunction = __webpack_require__(97);
 	
 	var ReactTransitionGroup = React.createClass({
 	  displayName: 'ReactTransitionGroup',
@@ -64930,7 +67012,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -65086,7 +67168,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -65415,7 +67497,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -65581,10 +67663,10 @@
 	
 	'use strict';
 	
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(90);
 	
-	var keyOf = __webpack_require__(113);
-	var invariant = __webpack_require__(94);
+	var keyOf = __webpack_require__(112);
+	var invariant = __webpack_require__(93);
 	var hasOwnProperty = {}.hasOwnProperty;
 	
 	function shallowCopy(x) {
@@ -65712,7 +67794,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -65863,7 +67945,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66073,7 +68155,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66288,7 +68370,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66455,7 +68537,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66608,7 +68690,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66791,7 +68873,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -66890,7 +68972,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -67013,7 +69095,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -67728,7 +69810,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -67989,7 +70071,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -68432,7 +70514,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -68531,7 +70613,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -68567,7 +70649,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -68611,7 +70693,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -68874,7 +70956,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -69221,7 +71303,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -69726,7 +71808,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -69999,7 +72081,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70035,7 +72117,7 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70106,7 +72188,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70276,7 +72358,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _reactDom = __webpack_require__(565);
 	
@@ -70396,7 +72478,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70532,7 +72614,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70760,7 +72842,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -70931,7 +73013,7 @@
 	
 	var _simpleAssign2 = _interopRequireDefault(_simpleAssign);
 	
-	var _react = __webpack_require__(89);
+	var _react = __webpack_require__(88);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -71196,7 +73278,7 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var array = React.PropTypes.array;
 	
 	
@@ -71244,7 +73326,7 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var func = _React$PropTypes.func;
 	var number = _React$PropTypes.number;
@@ -71369,7 +73451,7 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var func = _React$PropTypes.func;
 	var number = _React$PropTypes.number;
@@ -71377,7 +73459,7 @@
 	var string = _React$PropTypes.string;
 	var shape = _React$PropTypes.shape;
 	
-	var _require = __webpack_require__(262);
+	var _require = __webpack_require__(261);
 	
 	var interpolateNumber = _require.interpolateNumber;
 	var interpolateTransformSvg = _require.interpolateTransformSvg;
@@ -71517,13 +73599,13 @@
 	        style: { pointerEvents: 'none' },
 	        x1: 0, y1: 0,
 	        x2: 0, y2: yHeight,
-	        opacity: 0.2,
+	        opacity: 0.8,
 	        stroke: '#fff'
 	      }),
 	      React.createElement(
 	        'text',
 	        {
-	          fontSize: '9px',
+	          fontSize: '7px',
 	          textAnchor: 'middle',
 	          fill: 'white',
 	          x: 0, y: -5
@@ -71694,7 +73776,7 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var func = _React$PropTypes.func;
 	var number = _React$PropTypes.number;
@@ -71819,14 +73901,14 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var func = _React$PropTypes.func;
 	var number = _React$PropTypes.number;
 	var string = _React$PropTypes.string;
 	var shape = _React$PropTypes.shape;
 	
-	var _require = __webpack_require__(262);
+	var _require = __webpack_require__(261);
 	
 	var interpolateNumber = _require.interpolateNumber;
 	var interpolateTransformSvg = _require.interpolateTransformSvg;
@@ -71993,7 +74075,7 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(89);
+	var React = __webpack_require__(88);
 	var _React$PropTypes = React.PropTypes;
 	var string = _React$PropTypes.string;
 	var func = _React$PropTypes.func;
@@ -72004,7 +74086,7 @@
 	
 	var timer = _require.timer;
 	
-	var _require2 = __webpack_require__(262);
+	var _require2 = __webpack_require__(261);
 	
 	var interpolateNumber = _require2.interpolateNumber;
 	var interpolateString = _require2.interpolateString;
@@ -72060,7 +74142,6 @@
 	    node.setAttribute('d', path);
 	    node.style['cursor'] = 'pointer';
 	    node.style['pointer-events'] = 'all';
-	
 	    var interp = interpolateNumber(1e-6, 0.8);
 	
 	    this.transition = timer(function (elapsed) {
@@ -72123,6 +74204,17 @@
 	});
 	
 	module.exports = Path;
+
+/***/ },
+/* 779 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var hex_colors = exports.hex_colors = ['#f44336', '#C9BEB9', '#CFA07E', '#C4BAA1', '#C2B6BF', '#8FB5AA', '#85889E', '#9C7989', '#91919C', '#99677B', '#918A59', '#6E676C', '#6E4752', '#6B4A2F', '#998476', '#8A968D', '#968D8A', '#968D96', '#CC855C', '#967860', '#929488', '#949278', '#A0A3BD', '#BD93A1', '#65666B', '#6B5745', '#6B6664', '#695C52', '#56695E', '#69545C', '#565A69', '#696043', '#63635C', '#636150', '#333131', '#332820', '#302D30', '#302D1F', '#2D302F', '#CFB6A3'];
 
 /***/ }
 /******/ ]);

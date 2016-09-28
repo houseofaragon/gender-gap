@@ -1,66 +1,61 @@
 import moment from 'moment'
-import { area, stack, stackOffsetNone, stackOffsetSilhouette, stackOffsetExpand } from 'd3-shape'
+import { area, stack, stackOffsetNone, stackOffsetSilhouette, stackOffsetExpand, stackOffsetWiggle } from 'd3-shape'
 import { extent, merge, shuffle } from 'd3-array'
 import { scaleUtc, scaleLinear } from 'd3-scale'
 import { utcParse } from 'd3-time-format'
 import { fruits } from '../data/'
-import { income_data } from '../data/income-data'
+import { bls_earnings_data } from '../data/bls-earnings'
 
-let data = income_data
-
-/*
-const data = d.map((item) => {
+const data = bls_earnings_data.map((item) => {
   if(item.sex === 'Men'){
-    item.occupation = item.occupation + ' - M'
+    item.occupation = item.occupation + ' - 0'
     return item
   }
   else{
-    item.occupation = item.occupation + ' - F'
+    item.occupation = item.occupation + ' - 1'
     return item
   }
 })
-*/
+
+const getItems = () => {
+  map_years.map((year, idx1) => {
+    years[year] = true
+    let item = {year}
+    item.total = 0
+
+    data.map((oc, idx2) => {
+      let label = oc.occupation
+      let value = occupations[label][idx1]
+      if(value === undefined) value = 0
+      item[label] = value
+      item.total += value
+    })
+  return item
+  })
+}
+
+const getEarnings = (occupation) => {
+    let earnings = []
+    data.filter((item) => {
+      if(item.occupation && item.occupation === occupation){
+        if (item.earnings) earnings.push(item.earnings)
+      }
+    })
+    return earnings
+  }
 
 export function getInitialValues () {
   let years = {}
   let occupations = {}
 
   const map_occupations =  [...new Set(data.map(item => item.occupation))]
-  let map_years = [...new Set(data.map(item => item.year))]
+  const map_years = [...new Set(data.map(item => item.year))]
 
-  const getEarnings = (occupation) => {
-    let earnings = []
-    data.filter((item) => {
-      if(item.occupation && item.occupation === occupation){
-        if (item.earnings) earnings.push(item.earnings)
-      }
-
-    })
-    return earnings
-  }
-
-  for (let i = 0; i < map_occupations.length; i++) {
-    let occupation = map_occupations[i]
+  map_occupations.map((occupation, idx) => {
     occupations[occupation] = getEarnings(occupation)
-  }
+  })
 
-  let items = []
-  
-  for (let i = 0; i < map_years.length; i++) {
-    let year = map_years[i]
-    years[year] = true
-
-    let item = {year}
-    item.total = 0
-
-    for (let j = 0; j < data.length; j++) {
-      let label = data[j].occupation
-      let value = occupations[label][i]
-      item[label] = value
-      item.total += value
-    }
-    items.push(item)
-  }
+  const items = getItems()
 
   return [
     items,
@@ -69,7 +64,7 @@ export function getInitialValues () {
   ]
 }
 
-function getPath (x, y, yVals, dates) {
+const getPath = (x, y, yVals, dates) => {
   return area()
     .x(d => x(d))
     .y0((d, i) => y(yVals[i][0]))
@@ -78,12 +73,12 @@ function getPath (x, y, yVals, dates) {
 
 export function getPathsAndScales (dims, data, names, dates, offset) {
   names = names.filter(d => d.show === true).map(d => d.name)
-  dates = dates.map(d => utcParse('%Y-%m-%d')(d))
+  dates = dates.map(d => utcParse('%Y')(d))
 
   let layoutOffset = stackOffsetNone
 
   if (offset === 'stream') {
-    layoutOffset = stackOffsetSilhouette
+    layoutOffset = stackOffsetWiggle
   } else if (offset === 'expand') {
     layoutOffset = stackOffsetExpand
   }

@@ -1,4 +1,4 @@
-export const bls_income_data = [
+export const bls_earnings_data = [
  {
    "year": 2000,
    "earnings": 659,

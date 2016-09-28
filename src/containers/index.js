@@ -16,12 +16,13 @@ const { format } = require('d3-format')
 const numberFormat = format(',')
 const percentFormat = format('.1p')
 const { scaleOrdinal } = require('d3-scale')
+const { hex_colors } = require('./hex_colors')
 
 const App = React.createClass({
   getInitialState () {
     let colors = scaleOrdinal()
       .domain(this.props.names.map(d => d.name))
-      .range(['#9C6744', '#C9BEB9', '#CFA07E', '#C4BAA1', '#C2B6BF', '#8FB5AA', '#85889E', '#9C7989', '#91919C', '#99677B', '#918A59', '#6E676C', '#6E4752', '#6B4A2F', '#998476', '#8A968D', '#968D8A', '#968D96', '#CC855C', '#967860', '#929488', '#949278', '#A0A3BD', '#BD93A1', '#65666B', '#6B5745', '#6B6664', '#695C52', '#56695E', '#69545C', '#565A69', '#696043', '#63635C', '#636150', '#333131', '#332820', '#302D30', '#302D1F', '#2D302F', '#CFB6A3'])
+      .range(hex_colors)
     return { duration: 1000, colorMap: colors, activeName: '' }
   },
 
@@ -67,6 +68,7 @@ const App = React.createClass({
     let {view, trbl, names, mounted, dispatch, offset, xScale, yScale} = this.props
     let {duration, colorMap, activeName} = this.state
 
+    console.log(mounted)
     let pathNodes = Object.keys(mounted).map(key => {
       let node = mounted[key]
       return (
@@ -127,40 +129,28 @@ const App = React.createClass({
           showExpandableButton={false}
         />
         <div className='row' style={{marginLeft: 0, marginRight: 0}}>
-          <div className='col-md-5 col-sm-5'>
-            <div className='row'>
-              <div className='col-md-5 col-sm-5'style={{paddingLeft: 20}}>
-                <span>Chart Offset:</span>
-                <RadioButtonGroup
-                  name='offsets'
-                  valueSelected={offset}
-                  onChange={(e, d) => dispatch(changeOffset(d))}
-                >
-                  <RadioButton
-                    value='stacked'
-                    label='Stacked'
-                  />
-                  <RadioButton
-                    value='stream'
-                    label='Stream'
-                  />
-                  <RadioButton
-                    value='expand'
-                    label='Expand'
-                  />
-                </RadioButtonGroup>
-              </div>
-              <div className='col-md-7 col-sm-7'>
-                <span>Transition Duration: {(duration / 1000).toFixed(1)}</span>
-                <Slider
-                  style={{marginTop: 10, marginBottom: 10}}
-                  defaultValue={0.1}
-                  onChange={this.setDuration}
-                />
-              </div>
-            </div>
+          <div className='col-md-2 col-sm-2'style={{paddingLeft: 20}}>
+            <span>Chart Offset:</span>
+            <RadioButtonGroup
+              name='offsets'
+              valueSelected={offset}
+              onChange={(e, d) => dispatch(changeOffset(d))}
+            >
+            <RadioButton
+              value='stacked'
+              label='Stacked'
+            />
+            <RadioButton
+              value='stream'
+              label='Stream'
+            />
+            <RadioButton
+              value='expand'
+              label='Expand'
+            />
+            </RadioButtonGroup>
           </div>
-          <div className='col-md-7 col-sm-7'>
+          <div className='col-md-10 col-sm-10'>
             <h4 style={{margin: 0}}>As Women Take Over a Male-Dominated Field, the Pay Drops</h4>
             <p>Occupations with a greater share of females pay less than those with a lower share,
             controlling for education and skill. This association is explained by two dominant views:

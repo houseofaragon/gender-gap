@@ -43,7 +43,6 @@ const Path = React.createClass({
     node.setAttribute('d', path)
     node.style['cursor'] = 'pointer'
     node.style['pointer-events'] = 'all'
-
     let interp = interpolateNumber(1e-6, 0.8)
 
     this.transition = timer(elapsed => {

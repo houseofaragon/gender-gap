@@ -104,11 +104,11 @@ const XAxisTick = React.createClass({
           style={{pointerEvents: 'none'}}
           x1={0} y1={0}
           x2={0} y2={yHeight}
-          opacity={0.2}
+          opacity={0.8}
           stroke='#fff'
         />
         <text
-          fontSize={'9px'}
+          fontSize={'7px'}
           textAnchor='middle'
           fill='white'
           x={0} y={-5}
